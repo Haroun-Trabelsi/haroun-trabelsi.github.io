@@ -1,8 +1,21 @@
+export type ProjectMedia = {
+  type: "video" | "image";
+  src: string;
+  title?: string;
+  text?: string;
+};
+
 export type Project = {
   title: string;
   description: string;
   tech: string[];
   status: "LIVE" | "BETA" | "DEV";
+  image?: string; // optional thumbnail path in /public
+  slug?: string; // optional custom slug; defaults to slugified title
+  thumbnailPoster?: string; // list card poster image
+  thumbnailVideo?: string; // list card hover video
+  overviewVideo?: string; // detail hero video
+  sections?: ProjectMedia[]; // alternating media/text sections
 };
 
 export type Company = {
@@ -31,6 +44,29 @@ export const projects: Project[] = [
     description: "Very large scale AI Sales Assistants Built for Sellers",
     tech: ["React", "TypeScript", "FastAPI", "MongoDB", "Stripe","Qdrant","Groq"],
     status: "LIVE",
+    thumbnailPoster: "/images/journeylanding.png",
+    thumbnailVideo: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    overviewVideo: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    sections: [
+      {
+        type: "image",
+        src: "/images/visionage.png",
+        title: "Dashboard Overview",
+        text: "High-level view of pipeline health, leads, and agent performance in a pixel-inspired panel."
+      },
+      {
+        type: "video",
+        src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        title: "Agent in Action",
+        text: "Short clip demonstrating the AI assistant workflow from lead intake to summary."
+      },
+      {
+        type: "image",
+        src: "/placeholder.jpg",
+        title: "Insights & Metrics",
+        text: "Key metrics with retro grid accents and soft layering for a subtle 3D look."
+      }
+    ],
   },
   {
     title: "iDARA",
@@ -86,7 +122,7 @@ export const experiences: Experience[] = [
   {
     company: "Everything To Gain",
     role: "Senior Full Stack Developer",
-    period: "2025/08 - PRESENT",
+    period: "Aug/2025 - PRESENT",
     description:
       "Leading development of enterprise applications using React, Node.js, and cloud technologies.",
     color: "border-primary",
@@ -94,7 +130,7 @@ export const experiences: Experience[] = [
   {
     company: "Vision Age VFX",
     role: "Frontend Lead",
-    period: "2025/05 - 2025/08",
+    period: "Jun 2025 - Aug 2025",
     description:
       "Built scalable web applications and mentored junior developers in modern frontend practices.",
     color: "border-secondary",
@@ -102,7 +138,7 @@ export const experiences: Experience[] = [
   {
     company: "Infotec",
     role: "Full Stack Developer",
-    period: "2024/06 - 2024/08",
+    period: "Jun 2024 - Jul 2024",
     description:
       "Developed custom solutions for clients using various technologies and frameworks.",
     color: "border-tertiary",
@@ -110,7 +146,7 @@ export const experiences: Experience[] = [
   {
     company: "FREELANCE",
     role: "Web Developer",
-    period: "2016 - 2018",
+    period: "2022 - 2024",
     description:
       "Created websites and applications for small businesses and startups.",
     color: "border-primary",
