@@ -43,8 +43,9 @@ export function ProjectCard({
               sizes="(max-width: 768px) 100vw, 33vw"
               priority={false}
             />
-            {/* Subtle overlay to harmonize with color theme */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background/15 via-transparent to-background/25 pointer-events-none" />
+            {/* Enhanced overlay to match color scheme */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-tertiary/15 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none" />
           </div>
         </AspectRatio>
         <div className="p-6">
