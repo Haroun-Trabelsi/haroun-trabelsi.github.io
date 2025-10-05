@@ -28,6 +28,7 @@ export type Company = {
 export type Skill = {
   name: string;
   level: number; // percentage 0-100
+  category: "frontend" | "backend" | "tools" | "languages";
 };
 
 export type Experience = {
@@ -110,12 +111,35 @@ export const companies: Company[] = [
 ];
 
 export const skills: Skill[] = [
-  { name: "REACT", level: 95 },
-  { name: "TYPESCRIPT", level: 90 },
-  { name: "NODE.JS", level: 85 },
-  { name: "PYTHON", level: 80 },
-  { name: "NEXT.JS", level: 92 },
-  { name: "TAILWIND", level: 88 },
+  // Frontend
+  { name: "REACT", level: 95, category: "frontend" },
+  { name: "NEXT.JS", level: 92, category: "frontend" },
+  { name: "TAILWIND CSS", level: 88, category: "frontend" },
+  { name: "HTML/CSS", level: 98, category: "frontend" },
+  { name: "REACT NATIVE", level: 85, category: "frontend" },
+  { name: "ANGULAR", level: 75, category: "frontend" },
+  
+  // Backend
+  { name: "NODE.JS", level: 85, category: "backend" },
+  { name: "PYTHON", level: 80, category: "backend" },
+  { name: "FASTAPI", level: 85, category: "backend" },
+  { name: "EXPRESS", level: 90, category: "backend" },
+  { name: "MONGODB", level: 88, category: "backend" },
+  { name: "POSTGRESQL", level: 82, category: "backend" },
+  
+  // Tools
+  { name: "GIT", level: 92, category: "tools" },
+  { name: "DOCKER", level: 80, category: "tools" },
+  { name: "CI/CD", level: 78, category: "tools" },
+  { name: "AWS", level: 75, category: "tools" },
+  { name: "FIGMA", level: 85, category: "tools" },
+  { name: "WEBPACK", level: 70, category: "tools" },
+  
+  // Languages
+  { name: "TYPESCRIPT", level: 90, category: "languages" },
+  { name: "JAVASCRIPT", level: 95, category: "languages" },
+  { name: "PYTHON", level: 80, category: "languages" },
+  { name: "PHP", level: 70, category: "languages" },
 ];
 
 export const experiences: Experience[] = [
