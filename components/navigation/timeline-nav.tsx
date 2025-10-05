@@ -1,13 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { useAppleScrolling } from "@/hooks/use-apple-scrolling";
-import { Button } from "@/components/ui/button";
-import { useSound } from "@/components/sound/sound-provider";
 
 export function TimelineNav() {
   const { currentSection, scrollToSection } = useAppleScrolling();
-  const { enabled, toggle } = useSound();
   
   const sections = [
     { id: "hero", label: "HOME", color: "border-primary" },
@@ -43,23 +39,23 @@ export function TimelineNav() {
             <button
               onClick={() => handleGo(index)}
               aria-current={currentSection === index ? "page" : undefined}
-              className={`absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full border-2 transition-all duration-300 z-10 ${
+              className={`absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full border-2 transition-all duration-300 z-10 hover:scale-110 ${
                 currentSection === index
                   ? `bg-primary border-primary scale-125 shadow-lg shadow-primary/50`
-                  : `bg-card ${section.color} hover:bg-primary/20 hover:scale-110`
+                  : `bg-card ${section.color} hover:bg-primary/20`
               }`}
             />
             
             {/* Label alternating left/right */}
             <button
               onClick={() => handleGo(index)}
-              className={`absolute w-24 ${index % 2 === 0 ? 'left-2 text-left' : 'right-2 text-right'}`}
+              className={`absolute w-24 transition-all duration-300 hover:scale-105 ${index % 2 === 0 ? 'left-2 text-left' : 'right-2 text-right'}`}
             >
               <div
-                className={`font-pixel text-xs transition-colors duration-200 cursor-pointer ${
+                className={`font-pixel text-xs transition-all duration-300 cursor-pointer ${
                   currentSection === index
-                    ? "text-primary font-bold"
-                    : "text-muted-foreground hover:text-primary"
+                    ? "text-primary font-bold scale-105"
+                    : "text-muted-foreground hover:text-primary hover:font-semibold"
                 }`}
               >
                 {section.label}
@@ -69,18 +65,6 @@ export function TimelineNav() {
         ))}
       </div>
 
-      {/* Sound toggle */}
-      <div className="px-6">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={toggle}
-          className="font-pixel pixel-press text-sm w-full"
-          aria-pressed={enabled}
-        >
-          {enabled ? "SFX: ON" : "SFX: OFF"}
-        </Button>
-      </div>
     </nav>
   );
 }

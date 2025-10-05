@@ -46,8 +46,6 @@ export const projects: Project[] = [
     tech: ["React", "TypeScript", "FastAPI", "MongoDB", "Stripe","Qdrant","Groq"],
     status: "LIVE",
     thumbnailPoster: "/images/journeylanding.png",
-    thumbnailVideo: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-    overviewVideo: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
     sections: [
       {
         type: "image",
@@ -74,31 +72,30 @@ export const projects: Project[] = [
     description: "The AI Revolutionizing VFX Project Management, Especially for Matchmove and Rotoscoping",
     tech: ["React", "TypeScript", "MongoDB", "Express", "FastAPI", "Pytorch" ,"CI/CD" , "Docker"],
     status: "BETA",
+    thumbnailPoster: "/images/idara_logo_dark_background.png",
   },
   {
-    title: "Finances Management",
+    title: "Strategic AI",
     description: "Manage all employees hours, invoices, and payments in one place.",
     tech: ["React", "MongoDB", "TypeScript", "Material UI", "Node.js"],
     status: "DEV",
+    thumbnailPoster: "/images/StrategicAI.jpg",
   },
   {
-    title: "Cars e-commerce",
+    title: "Saleside",
     description: "Buy and sell used cars with ease on this sleek platform.",
     tech: ["Html", "Javascript", "Php"],
     status: "LIVE",
+    thumbnailPoster: "/images/Saleside.jpg",
   },
   {
-    title: "Art Auction App",
-    description: "Mobile app for auctioning and bidding on artwork.",
-    tech: ["React Native", "GraphQL", "PostgreSQL", "Symfony", "Image Encoding"],
-    status: "BETA",
-  },
-  {
-    title: "ANALYTICS PLATFORM",
-    description: "Business intelligence dashboard with advanced data visualization.",
-    tech: ["Angular", "D3.js", "Python", "Docker"],
+    title: "Navigator AI",
+    description: "Buy and sell used cars with ease on this sleek platform.",
+    tech: ["Html", "Javascript", "Php"],
     status: "LIVE",
+    thumbnailPoster: "/images/NavigatorAI.jpg",
   },
+  
 ];
 
 export const companies: Company[] = [

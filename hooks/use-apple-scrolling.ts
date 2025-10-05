@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
  */
 export function useAppleScrolling() {
   const [currentSection, setCurrentSection] = useState(0);
-  const sections = ["hero", "about", "projects", "companies", "experience", "skills", "contact"];
+  const sections = ["hero", "about", "experience", "projects", "skills", "contact"];
 
   useEffect(() => {
     const getEls = () =>
@@ -29,6 +29,12 @@ export function useAppleScrolling() {
       const atBottom = Math.ceil(window.scrollY + window.innerHeight) >= doc.scrollHeight - 1;
       if (atBottom) {
         setCurrentSection(sections.length - 1);
+        return;
+      }
+
+      // If user is at the very top (scrollY <= 50), force "HERO" as active
+      if (window.scrollY <= 50) {
+        setCurrentSection(0);
         return;
       }
  
@@ -64,8 +70,10 @@ export function useAppleScrolling() {
       }
     };
 
-    // Initial compute so HOME is active on load
-    updateActive();
+    // Initial compute so HOME is active on load - with a small delay to ensure DOM is ready
+    setTimeout(() => {
+      updateActive();
+    }, 100);
 
     let ticking = false;
     const onScroll = () => {

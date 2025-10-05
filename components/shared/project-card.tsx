@@ -32,46 +32,37 @@ export function ProjectCard({
       href={`/projects/${computedSlug}`}
       className="h-full block group"
     >
-      <Card className="h-full flex flex-col border-2 border-primary bg-card/80 hover:bg-card transition-colors duration-200">
-        <div className="border-b border-primary/30">
-          <AspectRatio ratio={16 / 9}>
-            <div className="absolute inset-0">
-              {/* Static image only */}
-              <Image
-                src={poster}
-                alt={`${title} thumbnail`}
-                fill
-                className="object-cover saturate-75 contrast-125 opacity-60 group-hover:opacity-80 transition-opacity duration-300"
-                sizes="(max-width: 768px) 100vw, 33vw"
-                priority={false}
-              />
-              {/* Overlays for vibe/texture */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/70 pointer-events-none" />
-              <div className="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:8px_8px] mix-blend-overlay pointer-events-none" />
-            </div>
-          </AspectRatio>
-        </div>
-        <CardHeader>
-          <div className="flex justify-between items-start">
-            <CardTitle className="font-pixel text-primary text-sm group-hover:underline underline-offset-4">
-              {title}
-            </CardTitle>
-            <Badge variant="secondary" className="font-pixel text-xs">
-              {status}
-            </Badge>
+      <div className="h-full flex flex-col">
+        <AspectRatio ratio={16 / 9}>
+          <div className="relative w-full h-full">
+            <Image
+              src={poster}
+              alt={`${title} thumbnail`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              priority={false}
+            />
+            {/* Subtle overlay to harmonize with color theme */}
+            <div className="absolute inset-0 bg-gradient-to-br from-background/15 via-transparent to-background/25 pointer-events-none" />
           </div>
-          <CardDescription className="text-muted-foreground">{description}</CardDescription>
-        </CardHeader>
-        <CardContent className="mt-auto">
+        </AspectRatio>
+        <div className="p-6">
+          <div className="flex justify-between items-start mb-3">
+            <h3 className="font-pixel text-primary text-lg group-hover:underline underline-offset-4">
+              {title}
+            </h3>
+          </div>
+          <p className="text-muted-foreground text-base mb-4 leading-relaxed">{description}</p>
           <div className="flex flex-wrap gap-2">
             {tech.map((item: string) => (
-              <Badge key={item} variant="outline" className="text-xs">
+              <Badge key={item} variant="outline" className="text-sm px-3 py-1">
                 {item}
               </Badge>
             ))}
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </Link>
   );
 }

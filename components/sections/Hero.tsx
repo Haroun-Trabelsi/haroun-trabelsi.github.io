@@ -6,10 +6,16 @@ import { Badge } from "@/components/ui/badge";
 
 export function Hero() {
   const handleViewProjects = () => {
+    // Dispatch event to reveal sections first
+    window.dispatchEvent(new Event("reveal-sections"));
+    // Then scroll to projects section
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleContactMe = () => {
+    // Dispatch event to reveal sections first
+    window.dispatchEvent(new Event("reveal-sections"));
+    // Then scroll to contact section
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -18,10 +24,10 @@ export function Hero() {
       <div className="lg:col-span-2 slide-in-left">
         <div className="mb-4 flex flex-wrap gap-2">
           <Badge className="font-pixel bg-primary/10 text-primary border border-primary">
-            🚀 OPEN TO WORK
+            OPEN TO WORK
           </Badge>
           <Badge className="font-pixel bg-tertiary/10 text-tertiary border border-tertiary">
-            📍 REMOTE
+            REMOTE
           </Badge>
         </div>
         
@@ -33,9 +39,9 @@ export function Hero() {
         </p>
         
         <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-          💼 4+ years building scalable web applications<br/>
-          🎯 Expert in React, TypeScript, Next.js, FastAPI<br/>
-          ⚡ Passionate about clean code and user experience
+          4+ years building scalable web applications<br/>
+          Expert in React, TypeScript, Next.js, FastAPI<br/>
+          Passionate about clean code and user experience
         </p>
         
         <div className="flex flex-wrap gap-4">
@@ -48,13 +54,13 @@ export function Hero() {
           <Button
             onClick={handleContactMe}
             variant="outline"
-            className="font-pixel border-secondary text-secondary hover:bg-secondary/10 bg-transparent pixel-press text-base"
+            className="font-pixel border-secondary text-secondary hover:bg-secondary/10 hover:text-secondary bg-transparent pixel-press text-base"
           >
             CONTACT ME
           </Button>
           <Button
             variant="outline"
-            className="font-pixel border-primary text-primary hover:bg-primary/10 bg-transparent pixel-press text-base"
+            className="font-pixel border-primary text-primary hover:bg-primary/10 hover:text-primary bg-transparent pixel-press text-base"
             asChild
           >
             <a href="/cv.pdf" download>DOWNLOAD CV</a>

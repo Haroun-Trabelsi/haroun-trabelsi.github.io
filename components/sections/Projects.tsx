@@ -19,7 +19,7 @@ export function Projects() {
       <div className="text-center space-y-4">
         <div className="flex justify-center space-x-4">
           <Badge variant="outline" className="font-pixel text-sm">
-            LATEST WORK
+            FEATURED WORK
           </Badge>
           <Badge variant="outline" className="font-pixel text-sm">
             {projects.length} PROJECTS
@@ -30,8 +30,8 @@ export function Projects() {
         </p>
       </div>
 
-      {/* Featured project grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {/* Featured projects in vertical strip */}
+      <div className="space-y-12 max-w-4xl mx-auto">
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
@@ -42,34 +42,27 @@ export function Projects() {
             variants={itemVariants}
             transition={{
               duration: prefersReducedMotion ? 0 : 0.6,
-              delay: prefersReducedMotion ? 0 : index * 0.15,
+              delay: prefersReducedMotion ? 0 : index * 0.2,
               ease: "easeOut",
             }}
             whileHover={
               prefersReducedMotion
                 ? undefined
-                : { y: -8, scale: 1.02, transition: { duration: 0.2 } }
+                : { y: -4, scale: 1.01, transition: { duration: 0.3 } }
             }
           >
-            {/* Project number indicator */}
-            <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary rounded-full flex items-center justify-center z-10">
-              <span className="font-pixel text-primary-foreground text-xs">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-            </div>
-
-            {/* Enhanced project card with glow effect */}
-            <div className="relative overflow-hidden rounded-lg border-2 border-primary/20 hover:border-primary/60 transition-all duration-300 bg-card/50 hover:bg-card/80">
+            {/* Scaled down project card */}
+            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-card/80 to-card/60 hover:from-card to-card/90 transition-all duration-500 shadow-md hover:shadow-lg w-full group-hover:shadow-primary/5">
               <ProjectCard {...project} />
               
-              {/* Hover glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              {/* Subtle hover effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/2 via-transparent to-secondary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               
               {/* Project status indicator */}
               <div className="absolute top-4 right-4">
                 <Badge 
                   variant="outline" 
-                  className="font-pixel text-xs bg-background/80 backdrop-blur-sm"
+                  className="font-pixel text-xs bg-background/95 backdrop-blur-md px-3 py-1 border-primary/30 hover:border-primary/60 transition-colors duration-300"
                 >
                   {project.status || 'COMPLETED'}
                 </Badge>
