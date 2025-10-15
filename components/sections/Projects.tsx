@@ -18,10 +18,10 @@ export function Projects() {
       {/* Project showcase header */}
       <div className="text-center space-y-4">
         <div className="flex justify-center space-x-4">
-          <Badge variant="outline" className="font-pixel text-sm">
+          <Badge variant="outline" className="font-pixel text-xs">
             FEATURED WORK
           </Badge>
-          <Badge variant="outline" className="font-pixel text-sm">
+          <Badge variant="outline" className="font-pixel text-xs">
             {projects.length} PROJECTS
           </Badge>
         </div>
@@ -30,8 +30,8 @@ export function Projects() {
         </p>
       </div>
 
-      {/* Featured projects in vertical strip */}
-      <div className="space-y-12 max-w-4xl mx-auto">
+      {/* Featured projects in 2-column grid on desktop, 1 column on mobile */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
@@ -42,27 +42,27 @@ export function Projects() {
             variants={itemVariants}
             transition={{
               duration: prefersReducedMotion ? 0 : 0.6,
-              delay: prefersReducedMotion ? 0 : index * 0.2,
+              delay: prefersReducedMotion ? 0 : index * 0.15,
               ease: "easeOut",
             }}
             whileHover={
               prefersReducedMotion
                 ? undefined
-                : { y: -4, scale: 1.01, transition: { duration: 0.3 } }
+                : { y: -4, scale: 1.02, transition: { duration: 0.3 } }
             }
           >
-            {/* Scaled down project card */}
-            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-card/80 to-card/60 hover:from-card to-card/90 transition-all duration-500 shadow-md hover:shadow-lg w-full group-hover:shadow-primary/5">
+            {/* Project card */}
+            <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-card/80 to-card/60 hover:from-card to-card/90 transition-all duration-500 shadow-md hover:shadow-lg w-full group-hover:shadow-primary/10 h-full">
               <ProjectCard {...project} />
               
               {/* Subtle hover effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/2 via-transparent to-secondary/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-secondary/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               
               {/* Project status indicator */}
-              <div className="absolute top-4 right-4">
+              <div className="absolute top-3 right-3">
                 <Badge 
                   variant="outline" 
-                  className="font-pixel text-xs bg-background/95 backdrop-blur-md px-3 py-1 border-primary/30 hover:border-primary/60 transition-colors duration-300"
+                  className="font-pixel text-[0.625rem] bg-background/95 backdrop-blur-md px-2 py-0.5 border-primary/30 hover:border-primary/60 transition-colors duration-300"
                 >
                   {project.status || 'COMPLETED'}
                 </Badge>
@@ -79,9 +79,9 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="inline-flex items-center space-x-4 bg-card/50 border-2 border-primary/20 rounded-lg px-6 py-4"
+          className="inline-flex items-center space-x-4 bg-card/50 border border-primary/20 rounded-lg px-5 py-3"
         >
-          <span className="font-pixel text-primary text-sm">MORE PROJECTS</span>
+          <span className="font-pixel text-primary text-xs">MORE PROJECTS</span>
           <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
           <span className="text-muted-foreground text-sm">Available on GitHub</span>
         </motion.div>

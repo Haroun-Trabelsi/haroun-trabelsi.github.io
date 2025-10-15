@@ -19,21 +19,21 @@ export function PixelNav() {
   };
 
   return (
-    <nav className="border-b-2 border-primary bg-card/50 backdrop-blur-sm fixed w-full top-0 z-50">
+    <nav className="border-b border-primary/30 bg-card/80 backdrop-blur-md fixed w-full top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
-          <div className="font-pixel text-primary text-xl">{`<DEV/>`}</div>
+        <div className="flex items-center justify-between py-2">
+          <div className="font-pixel text-primary text-sm">{`<DEV/>`}</div>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex space-x-1 overflow-x-auto">
+          <div className="hidden md:flex space-x-0.5 overflow-x-auto">
             {tabs.map((tab, index) => (
               <button
                 key={tab}
                 onClick={() => handleGo(index)}
                 aria-current={currentSection === index ? "page" : undefined}
-                className={`px-3 py-2 font-pixel text-xs transition-colors duration-200 whitespace-nowrap pixel-press ${
+                className={`px-2.5 py-1.5 font-medium text-[0.8125rem] transition-all duration-200 whitespace-nowrap rounded-md ${
                   currentSection === index
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-primary text-primary-foreground shadow-sm"
                     : "text-muted-foreground hover:text-primary hover:bg-primary/10"
                 }`}
               >
@@ -45,10 +45,10 @@ export function PixelNav() {
             variant="outline"
             size="sm"
             onClick={toggle}
-            className="font-pixel hidden md:inline-flex ml-2 pixel-press"
+            className="hidden md:inline-flex ml-2 text-xs h-7 px-2.5"
             aria-pressed={enabled}
           >
-            {enabled ? "SFX: ON" : "SFX: OFF"}
+            {enabled ? "SFX ON" : "SFX OFF"}
           </Button>
 
           {/* Mobile nav */}
@@ -57,14 +57,14 @@ export function PixelNav() {
               variant="outline"
               size="sm"
               onClick={toggle}
-              className="font-pixel pixel-press"
+              className="text-xs h-7 px-2.5"
               aria-pressed={enabled}
             >
-              {enabled ? "SFX: ON" : "SFX: OFF"}
+              {enabled ? "SFX" : "SFX"}
             </Button>
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="sm" className="font-pixel">
+                <Button variant="outline" size="sm" className="text-xs h-7 px-2.5">
                   MENU
                 </Button>
               </SheetTrigger>
@@ -78,7 +78,7 @@ export function PixelNav() {
                         setOpen(false);
                       }}
                       aria-current={currentSection === index ? "page" : undefined}
-                      className={`w-full text-left px-3 py-2 font-pixel text-xs transition-colors duration-200 pixel-press ${
+                      className={`w-full text-left px-3 py-2 text-sm transition-colors duration-200 rounded-md ${
                         currentSection === index
                           ? "bg-primary text-primary-foreground"
                           : "text-muted-foreground hover:text-primary hover:bg-primary/10"

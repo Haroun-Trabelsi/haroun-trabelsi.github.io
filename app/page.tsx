@@ -88,7 +88,7 @@ export default function Portfolio() {
   }, [visibleElements, direction]);
 
   return (
-    <div className="ml-0 md:ml-64">
+    <div className="ml-0 md:ml-48">
       <TimelineNav />
 
       {/* HERO */}

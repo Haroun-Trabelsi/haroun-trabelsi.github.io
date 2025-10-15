@@ -174,17 +174,48 @@ export function Contact() {
 
       <footer className="border-t-2 border-primary bg-card/50 backdrop-blur-sm mt-16 rounded-xl">
         <div className="container mx-auto px-4 py-8">
-          <div className="flex justify-between items-center">
-            <div className="font-pixel text-primary text-sm">© 2025 PIXEL DEV</div>
-            <div className="flex space-x-4">
-              <Button variant="ghost" size="sm" className="font-pixel text-xs pixel-press">
-                GITHUB
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="font-pixel text-primary text-sm">© 2025 HAROUN TRABELSI</div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="font-pixel text-xs pixel-press"
+                asChild
+              >
+                <a href="https://haroun-trabelsi.github.io/" target="_blank" rel="noopener noreferrer">
+                  WEBSITE
+                </a>
               </Button>
-              <Button variant="ghost" size="sm" className="font-pixel text-xs pixel-press">
-                LINKEDIN
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="font-pixel text-xs pixel-press"
+                asChild
+              >
+                <a href="https://linkedin.com/in/harountrabelsi1" target="_blank" rel="noopener noreferrer">
+                  LINKEDIN
+                </a>
               </Button>
-              <Button variant="ghost" size="sm" className="font-pixel text-xs pixel-press">
-                TWITTER
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="font-pixel text-xs pixel-press"
+                asChild
+              >
+                <a href="mailto:harountrabelsi12@gmail.com">
+                  EMAIL
+                </a>
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="font-pixel text-xs pixel-press"
+                asChild
+              >
+                <a href="tel:+21642417058">
+                  PHONE
+                </a>
               </Button>
             </div>
           </div>

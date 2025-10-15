@@ -9,10 +9,10 @@ import { SoundProvider } from "@/components/sound/sound-provider";
 
 
 export const metadata: Metadata = {
-  title: "Haroun Trabelsi — Full‑Stack Developer",
-  description: "Modern apps with a retro soul. React, Next.js, Node.js, TypeScript.",
+  title: "Haroun Trabelsi — Junior Software Engineer | Tunisia",
+  description: "Adaptable and self-driven Junior Software Engineer skilled in React, Node.js, Spring Boot, and CI/CD. Building scalable web apps and impactful software solutions.",
   applicationName: "Haroun Trabelsi Portfolio",
-  generator: "v0.app",
+  generator: "Next.js",
   icons: {
     icon: [{ url: "/placeholder-logo.png" }, { url: "/placeholder-logo.svg", type: "image/svg+xml" }],
     shortcut: ["/placeholder-logo.png"],
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
-    title: "Haroun Trabelsi — Full‑Stack Developer",
-    description: "Modern apps with a retro soul. React, Next.js, Node.js, TypeScript.",
-    images: [{ url: "/images/pixel-bg.jpg", width: 1200, height: 630, alt: "Retro pixel background" }],
+    title: "Haroun Trabelsi — Junior Software Engineer",
+    description: "Skilled in building scalable web applications, managing databases, and leading team projects. Passionate about impactful software and clean architecture.",
+    images: [{ url: "/images/pixel-bg.jpg", width: 1200, height: 630, alt: "Portfolio background" }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Haroun Trabelsi — Full‑Stack Developer",
-    description: "Modern apps with a retro soul. React, Next.js, Node.js, TypeScript.",
+    title: "Haroun Trabelsi — Junior Software Engineer",
+    description: "Building scalable web apps with React, Node.js, and modern technologies.",
     images: ["/images/pixel-bg.jpg"],
   },
 };

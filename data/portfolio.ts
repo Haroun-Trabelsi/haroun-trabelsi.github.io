@@ -42,8 +42,8 @@ export type Experience = {
 export const projects: Project[] = [
   {
     title: "JourneyAI",
-    description: "Very large scale AI Sales Assistants Built for Sellers",
-    tech: ["React", "TypeScript", "FastAPI", "MongoDB", "Stripe","Qdrant","Groq"],
+    description: "AI-powered sales research platform with automated CI/CD, contextual insights, and enhanced data retrieval using Qdrant & Redis",
+    tech: ["React", "TypeScript", "FastAPI", "Qdrant", "Redis", "CI/CD"],
     status: "LIVE",
     thumbnailPoster: "/images/journeylanding.png",
     sections: [
@@ -51,125 +51,114 @@ export const projects: Project[] = [
         type: "image",
         src: "/images/visionage.png",
         title: "Dashboard Overview",
-        text: "High-level view of pipeline health, leads, and agent performance in a pixel-inspired panel."
+        text: "Automated data retrieval and structured knowledge management improving sales research efficiency by ~40%."
       },
       {
         type: "video",
         src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-        title: "Agent in Action",
-        text: "Short clip demonstrating the AI assistant workflow from lead intake to summary."
+        title: "Real-time Intelligence",
+        text: "Advanced AI model APIs generating contextual insights organized by team, organization, and individual."
       },
       {
         type: "image",
         src: "/placeholder.jpg",
-        title: "Insights & Metrics",
-        text: "Key metrics with retro grid accents and soft layering for a subtle 3D look."
+        title: "Deployment Pipeline",
+        text: "Automated CI/CD pipelines streamlining workflows across staging and production environments."
       }
     ],
   },
   {
-    title: "iDARA",
-    description: "The AI Revolutionizing VFX Project Management, Especially for Matchmove and Rotoscoping",
-    tech: ["React", "TypeScript", "MongoDB", "Express", "FastAPI", "Pytorch" ,"CI/CD" , "Docker"],
-    status: "BETA",
-    thumbnailPoster: "/images/idara_logo_dark_background.png",
-  },
-  {
-    title: "Strategic AI",
-    description: "Manage all employees hours, invoices, and payments in one place.",
-    tech: ["React", "MongoDB", "TypeScript", "Material UI", "Node.js"],
-    status: "DEV",
+    title: "StrategicAI",
+    description: "Modular, scalable automation platform with node-based workflows, supporting export to n8n and Make for advanced automation",
+    tech: ["React", "Node.js", "TypeScript", "Automation", "REST APIs"],
+    status: "LIVE",
     thumbnailPoster: "/images/StrategicAI.jpg",
   },
   {
     title: "Saleside",
-    description: "Buy and sell used cars with ease on this sleek platform.",
-    tech: ["Html", "Javascript", "Php"],
+    description: "AI-driven sales coaching platform providing real-time conversational guidance during live client calls, reducing response hesitation by ~45%",
+    tech: ["React", "NLU", "Speech-to-Text", "AI APIs", "WebSockets"],
     status: "LIVE",
     thumbnailPoster: "/images/Saleside.jpg",
   },
   {
+    title: "iDARA",
+    description: "Internal VFX platform with automated task assignment, ML-powered difficulty estimation, and unified photogrammetry/motion reconstruction pipeline",
+    tech: ["React", "TypeScript", "MongoDB", "Express", "FastAPI", "PyTorch", "CI/CD", "Docker"],
+    status: "DEV",
+    thumbnailPoster: "/images/idara_logo_dark_background.png",
+  },
+  {
     title: "Navigator AI",
-    description: "Buy and sell used cars with ease on this sleek platform.",
-    tech: ["Html", "Javascript", "Php"],
-    status: "LIVE",
+    description: "Treasury management web app with invoice generation, cheque printing, TVA/tax calculation, and multi-settlement tracking",
+    tech: ["React", "Express.js", "SQL", "REST APIs", "Git"],
+    status: "DEV",
     thumbnailPoster: "/images/NavigatorAI.jpg",
   },
   
 ];
 
 export const companies: Company[] = [
-  { name: "Infotec", role: "Software Engineer", logo: "", color: "text-primary" },
+  { name: "EverythingToGain", role: "Junior Software Engineer", logo: "", color: "text-primary" },
   { name: "Vision Age VFX", role: "Tech Lead", logo: "", color: "text-secondary" },
-  { name: "Everything To Gain", role: "Software Engineer", logo: "", color: "text-tertiary" },
-  { name: "Freelance", role: "React Specialist", logo: "", color: "text-primary" },
-  { name: "NETFLIX", role: "UI/UX Developer", logo: "", color: "text-secondary" },
-  { name: "SPOTIFY", role: "Frontend Lead", logo: "", color: "text-tertiary" },
+  { name: "Infotec", role: "Software Engineering Intern", logo: "", color: "text-tertiary" },
 ];
 
 export const skills: Skill[] = [
   // Frontend
-  { name: "REACT", level: 95, category: "frontend" },
-  { name: "NEXT.JS", level: 92, category: "frontend" },
-  { name: "TAILWIND CSS", level: 88, category: "frontend" },
-  { name: "HTML/CSS", level: 98, category: "frontend" },
-  { name: "REACT NATIVE", level: 85, category: "frontend" },
+  { name: "REACT", level: 90, category: "frontend" },
   { name: "ANGULAR", level: 75, category: "frontend" },
+  { name: "HTML/CSS", level: 85, category: "frontend" },
+  { name: "UI/UX DESIGN", level: 80, category: "frontend" },
   
   // Backend
-  { name: "NODE.JS", level: 85, category: "backend" },
-  { name: "PYTHON", level: 80, category: "backend" },
-  { name: "FASTAPI", level: 85, category: "backend" },
-  { name: "EXPRESS", level: 90, category: "backend" },
-  { name: "MONGODB", level: 88, category: "backend" },
-  { name: "POSTGRESQL", level: 82, category: "backend" },
+  { name: "NODE.JS", level: 88, category: "backend" },
+  { name: "EXPRESS.JS", level: 90, category: "backend" },
+  { name: "SPRING BOOT", level: 82, category: "backend" },
+  { name: "REDIS", level: 85, category: "backend" },
+  { name: "SQL", level: 80, category: "backend" },
   
   // Tools
   { name: "GIT", level: 92, category: "tools" },
-  { name: "DOCKER", level: 80, category: "tools" },
-  { name: "CI/CD", level: 78, category: "tools" },
-  { name: "AWS", level: 75, category: "tools" },
-  { name: "FIGMA", level: 85, category: "tools" },
-  { name: "WEBPACK", level: 70, category: "tools" },
+  { name: "DOCKER", level: 85, category: "tools" },
+  { name: "CI/CD", level: 80, category: "tools" },
+  { name: "SELENIUM", level: 78, category: "tools" },
+  { name: "QDRANT", level: 82, category: "tools" },
+  { name: "REST APIS", level: 88, category: "tools" },
+  { name: "AGILE/SCRUM", level: 85, category: "tools" },
   
   // Languages
-  { name: "TYPESCRIPT", level: 90, category: "languages" },
-  { name: "JAVASCRIPT", level: 95, category: "languages" },
-  { name: "PYTHON", level: 80, category: "languages" },
-  { name: "PHP", level: 70, category: "languages" },
+  { name: "JAVASCRIPT", level: 92, category: "languages" },
+  { name: "TYPESCRIPT", level: 85, category: "languages" },
+  { name: "PYTHON", level: 88, category: "languages" },
+  { name: "JAVA", level: 80, category: "languages" },
+  { name: "C++", level: 75, category: "languages" },
+  { name: "C#", level: 72, category: "languages" },
 ];
 
 export const experiences: Experience[] = [
   {
-    company: "Everything To Gain",
-    role: "Senior Full Stack Developer",
-    period: "Aug/2025 - PRESENT",
+    company: "EverythingToGain",
+    role: "Junior Software Engineer",
+    period: "Aug 2025 - Oct 2025",
     description:
-      "Leading development of enterprise applications using React, Node.js, and cloud technologies.",
+      "Integrated automated CI/CD pipelines and upgraded data storage architecture using Qdrant and Redis, enhancing real-time search capabilities and reducing retrieval latency for high-traffic features. Collaborated with development, QA, and DevOps teams across staging and production environments.",
     color: "border-primary",
   },
   {
     company: "Vision Age VFX",
-    role: "Frontend Lead",
-    period: "Jun 2025 - Aug 2025",
+    role: "Tech Lead",
+    period: "May 2025 - Jul 2025",
     description:
-      "Built scalable web applications and mentored junior developers in modern frontend practices.",
+      "Directed development of an internal web platform with automated task assignment and ML-powered difficulty estimation. Spearheaded cross-functional integration of photogrammetry and motion reconstruction outputs, streamlining VFX production timelines.",
     color: "border-secondary",
   },
   {
     company: "Infotec",
-    role: "Full Stack Developer",
-    period: "Jun 2024 - Jul 2024",
+    role: "Software Engineering Intern",
+    period: "Jan 2025 - May 2025",
     description:
-      "Developed custom solutions for clients using various technologies and frameworks.",
+      "Designed and developed treasury management web app using React, Express.js, and SQL with features including invoice generation, cheque printing, TVA/tax calculation, and multi-settlement handling. Implemented version control with Git, reducing bug resolution time by 25% and improving system response time by 30%.",
     color: "border-tertiary",
-  },
-  {
-    company: "FREELANCE",
-    role: "Web Developer",
-    period: "2022 - 2024",
-    description:
-      "Created websites and applications for small businesses and startups.",
-    color: "border-primary",
   },
 ];

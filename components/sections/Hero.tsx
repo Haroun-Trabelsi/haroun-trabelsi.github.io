@@ -27,21 +27,24 @@ export function Hero() {
             OPEN TO WORK
           </Badge>
           <Badge className="font-pixel bg-tertiary/10 text-tertiary border border-tertiary">
-            REMOTE
+            REMOTE & ON-SITE
+          </Badge>
+          <Badge className="font-pixel bg-secondary/10 text-secondary border border-secondary">
+            TUNISIA
           </Badge>
         </div>
         
         <h1 className="font-pixel text-4xl md:text-6xl text-primary mb-4 glitch">HAROUN TRABELSI</h1>
-        <h2 className="font-pixel text-2xl md:text-3xl text-secondary mb-6">FULL-STACK SOFTWARE ENGINEER</h2>
+        <h2 className="font-pixel text-2xl md:text-3xl text-secondary mb-6">JUNIOR SOFTWARE ENGINEER</h2>
         
         <p className="text-muted-foreground text-xl mb-4 leading-relaxed">
-          Crafting digital experiences with modern technologies and retro aesthetics. Specializing in <span className="text-primary font-semibold">React</span>, <span className="text-primary font-semibold">Node.js</span>, and everything in between.
+          Adaptable and self-driven engineer with strong full-stack development experience and hands-on exposure to real-world projects. Building <span className="text-primary font-semibold">scalable web apps</span>, managing <span className="text-primary font-semibold">databases</span>, and leading team projects.
         </p>
         
         <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-          4+ years building scalable web applications<br/>
-          Expert in React, TypeScript, Next.js, FastAPI<br/>
-          Passionate about clean code and user experience
+          Skilled in React, Node.js, Spring Boot, and CI/CD<br/>
+          Passionate about impactful software and clean architecture<br/>
+          Expert in Git, Docker, Selenium, and REST APIs
         </p>
         
         <div className="flex flex-wrap gap-4">
@@ -63,7 +66,7 @@ export function Hero() {
             className="font-pixel border-primary text-primary hover:bg-primary/10 hover:text-primary bg-transparent pixel-press text-base"
             asChild
           >
-            <a href="/cv.pdf" download>DOWNLOAD CV</a>
+            <a href="/Haroun Trabelsi - Software Engineer.pdf" download="Haroun_Trabelsi_CV.pdf">DOWNLOAD CV</a>
           </Button>
         </div>
       </div>

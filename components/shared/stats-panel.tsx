@@ -9,23 +9,23 @@ export function StatsPanel() {
       <div className="space-y-3">
         <div className="flex justify-between items-center">
           <span className="text-muted-foreground text-sm">PROJECTS:</span>
-          <AnimatedCounter end={50} suffix="+" />
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-muted-foreground text-sm">EXPERIENCE:</span>
-          <AnimatedCounter end={4} suffix=" YRS"/>
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-muted-foreground text-sm">CLIENTS:</span>
           <AnimatedCounter end={15} suffix="+" />
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-muted-foreground text-sm">COMMITS:</span>
-          <AnimatedCounter end={2500} />
+          <span className="text-muted-foreground text-sm">EFFICIENCY GAIN:</span>
+          <AnimatedCounter end={40} suffix="%"/>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-muted-foreground text-sm">COFFEE:</span>
-          <AnimatedCounter end={9999} suffix="+" />
+          <span className="text-muted-foreground text-sm">TECH STACK:</span>
+          <AnimatedCounter end={25} suffix="+" />
+        </div>
+        <div className="flex justify-between items-center">
+          <span className="text-muted-foreground text-sm">BUG REDUCTION:</span>
+          <AnimatedCounter end={25} suffix="%" />
+        </div>
+        <div className="flex justify-between items-center">
+          <span className="text-muted-foreground text-sm">RESPONSE BOOST:</span>
+          <AnimatedCounter end={30} suffix="%" />
         </div>
       </div>
     </div>
