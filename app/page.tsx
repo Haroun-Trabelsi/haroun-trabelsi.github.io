@@ -17,7 +17,6 @@ export default function Portfolio() {
 
   // Reveal non-hero sections only after the user starts scrolling down (wheel/touch/keys/scroll)
   const [revealed, setRevealed] = useState(false);
-
   useEffect(() => {
     if (revealed) return;
 
