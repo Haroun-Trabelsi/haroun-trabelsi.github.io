@@ -12,6 +12,10 @@ export function StatsPanel() {
           <AnimatedCounter end={15} suffix="+" />
         </div>
         <div className="flex justify-between items-center">
+          <span className="text-muted-foreground text-sm">EXPERIENCE:</span>
+          <AnimatedCounter end={2} suffix=" YRS" prefix="+" />
+        </div>
+        <div className="flex justify-between items-center">
           <span className="text-muted-foreground text-sm">EFFICIENCY GAIN:</span>
           <AnimatedCounter end={40} suffix="%"/>
         </div>
@@ -22,10 +26,6 @@ export function StatsPanel() {
         <div className="flex justify-between items-center">
           <span className="text-muted-foreground text-sm">BUG REDUCTION:</span>
           <AnimatedCounter end={25} suffix="%" />
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-muted-foreground text-sm">RESPONSE BOOST:</span>
-          <AnimatedCounter end={30} suffix="%" />
         </div>
       </div>
     </div>
