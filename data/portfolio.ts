@@ -42,44 +42,141 @@ export type Experience = {
 export const projects: Project[] = [
   {
     title: "JourneyAI",
-    description: "AI-powered sales research platform with automated CI/CD, contextual insights, and enhanced data retrieval using Qdrant & Redis",
-    tech: ["React", "TypeScript", "FastAPI", "Qdrant", "Redis", "CI/CD"],
+    description: "Production-grade AI sales assistant platform serving 10 enterprise clients with 98% uptime. Built sophisticated RAG pipeline with multi-collection vector search, real-time WebSocket streaming, session snapshots/forking system, and comprehensive subscription management. Contributed 25% of codebase including semantic search engine, background worker system, and Stripe integration.",
+    tech: ["React 19", "TypeScript", "FastAPI", "MongoDB", "Qdrant", "Redis", "OpenAI GPT-4", "WebSockets", "ARQ", "Stripe", "Docker", "Pydantic", "Beanie ODM"],
     status: "LIVE",
     thumbnailPoster: "/images/journeylanding.png",
+    slug: "journeyai",
     sections: [
       {
         type: "image",
-        src: "/images/visionage.png",
-        title: "Dashboard Overview",
-        text: "Automated data retrieval and structured knowledge management improving sales research efficiency by ~40%."
-      },
-      {
-        type: "video",
-        src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-        title: "Real-time Intelligence",
-        text: "Advanced AI model APIs generating contextual insights organized by team, organization, and individual."
+        src: "/images/journeyai-chat-interface.png", // ALT: Real-time chat interface showing AI assistant conversation with WebSocket streaming
+        title: "Real-Time AI Chat with WebSocket Streaming",
+        text: "Built sophisticated real-time chat system with 12+ specialized AI assistants (Account Strategy, Prospecting, Research, Closing). Implemented session-aware WebSocket architecture with event batching, preventing cross-session contamination and optimizing render performance. Token-by-token streaming with function call visualization."
       },
       {
         type: "image",
-        src: "/placeholder.jpg",
-        title: "Deployment Pipeline",
-        text: "Automated CI/CD pipelines streamlining workflows across staging and production environments."
+        src: "/images/journeyai-semantic-search.png", // ALT: Semantic search interface or code showing RAG pipeline with Qdrant vector search
+        title: "Semantic Search Engine with RAG Pipeline",
+        text: "Implemented multi-collection vector search across Artifacts, Messages, and Organization Files using OpenAI text-embedding-3-large model. Built AI categorization system with strict JSON validation for Qdrant storage. Features score thresholding, complex multi-tenant filters, and dynamic context injection into AI prompts."
+      },
+      {
+        type: "image",
+        src: "/images/journeyai-snapshots.png", // ALT: Session snapshots UI showing conversation branching and forking feature
+        title: "Session Snapshots & Forking System",
+        text: "Designed conversation branching feature allowing users to save states, fork from previous messages to explore alternative paths, and restore snapshots. Maintains full conversation history with vector embeddings for contextual awareness across forked sessions."
+      },
+      {
+        type: "image",
+        src: "/images/journeyai-architecture.png", // ALT: System architecture diagram showing FastAPI, MongoDB, Qdrant, Redis, WebSocket components
+        title: "Scalable Multi-Tenant Architecture",
+        text: "Production FastAPI backend with async/await patterns, multi-tenant organization-level data isolation, and background job queue using ARQ (Redis-based). Comprehensive error handling with Loguru, RESTful API design with OpenAPI documentation, and Docker containerization for consistent deployments."
+      },
+      {
+        type: "image",
+        src: "/images/journeyai-subscription.png", // ALT: Subscription management dashboard showing Stripe integration and pricing tiers
+        title: "Stripe Subscription Management",
+        text: "Complete Stripe integration with webhook lifecycle management, subscription tiers ($35/month Pro, $299/year), trial management, and customer portal. Automated email reports using Jinja2 templates with weekly/monthly analytics aggregation via background cron jobs."
+      },
+      {
+        type: "image",
+        src: "/images/journeyai-dynamic-components.png", // ALT: Dynamic component rendering showing backend-driven UI updates
+        title: "Dynamic Component Rendering System",
+        text: "Built flexible JSON-to-React component engine enabling backend-driven UI updates without frontend deployments. Recursive component tree building with type-safe registry supporting 70+ components including SaveArtifactDropdown, FunctionToolCallAccordion, and EnhancedWebSearchIndicator."
       }
     ],
   },
   {
     title: "StrategicAI",
-    description: "Modular, scalable automation platform with node-based workflows, supporting export to n8n and Make for advanced automation",
-    tech: ["React", "Node.js", "TypeScript", "Automation", "REST APIs"],
+    description: "Enterprise-grade workflow automation platform with visual drag-and-drop builder and sophisticated export ecosystem. Built complete transformation system converting internal workflows to 3 platform-specific formats (Zapier, Make, n8n) with multi-mode export (API-based automatic, manual JSON, webhook). Features topological sorting for dependency resolution, variable resolution system, and real-time execution engine.",
+    tech: ["React", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Drizzle ORM", "React Flow", "Passport.js", "Google OAuth", "OpenAI GPT-4", "shadcn/ui", "Tailwind CSS"],
     status: "LIVE",
     thumbnailPoster: "/images/StrategicAI.jpg",
+    slug: "strategicai",
+    sections: [
+      {
+        type: "image",
+        src: "/images/strategicai-workflow-builder.png", // ALT: Visual workflow builder interface with drag-and-drop nodes connected by lines, showing React Flow canvas
+        title: "Visual Workflow Builder with React Flow",
+        text: "Built drag-and-drop interface for real-time visual workflow design with dynamic node connections and dependencies. Features catalog-driven UI with platform-specific parameter configuration, allowing users to design complex multi-step automations through an intuitive visual interface."
+      },
+      {
+        type: "image",
+        src: "/images/strategicai-export-system.png", // ALT: Export interface showing multi-platform options (Zapier, Make, n8n) with export mode selection
+        title: "Sophisticated Multi-Platform Export Ecosystem",
+        text: "Developed abstract transformer architecture supporting 3 export modes: Automatic (direct API-based workflow creation), Manual (JSON export with setup instructions), and Webhook (push to custom endpoints). Platform-specific transformers handle node type detection, connection mapping, and parameter transformation for Zapier, Make, and n8n formats."
+      },
+      {
+        type: "image",
+        src: "/images/strategicai-transformers.png", // ALT: Code or diagram showing ExportService.ts transformer pattern with ZapierTransformer, MakeTransformer, N8nTransformer
+        title: "Abstract Transformer Architecture",
+        text: "Implemented extensible transformer pattern with base classes for platform conversion. Features secure credential encryption, retry logic with exponential backoff, API validation, and comprehensive error handling with troubleshooting suggestions. Export history tracking enables audit trails and debugging."
+      },
+      {
+        type: "image",
+        src: "/images/strategicai-execution-engine.png", // ALT: Workflow execution view showing step-by-step progress, real-time status updates, and results
+        title: "Real-Time Workflow Execution Engine",
+        text: "Built execution engine with topological sorting algorithm for dependency resolution and variable resolver system enabling dynamic data flow between steps using {{step_id.output_field}} syntax. Supports Google Docs, Gmail, OpenAI, Slack, Discord with OAuth token management and graceful error handling."
+      },
+      {
+        type: "image",
+        src: "/images/strategicai-integrations.png", // ALT: Integration dashboard showing connected platforms: Google, OpenAI, Slack, Discord, PayPal, Stripe
+        title: "Multi-Provider OAuth & Integration System",
+        text: "Integrated multiple OAuth providers (Google OAuth 2.0) with token refresh handling and secure storage. Modular platform architecture with standardized action interfaces, catalog-driven configuration from action_catalog.json, and API key management for third-party services."
+      },
+      {
+        type: "image",
+        src: "/images/strategicai-architecture.png", // ALT: System architecture diagram showing full-stack monorepo with shared TypeScript schemas
+        title: "Type-Safe Full-Stack Architecture",
+        text: "Full-stack TypeScript monorepo with shared schemas ensuring compile-time safety across frontend/backend. PostgreSQL with Drizzle ORM for type-safe queries, session management with PostgreSQL storage, and comprehensive error handling through centralized ErrorHandler service with transaction support."
+      }
+    ],
   },
   {
     title: "Saleside",
-    description: "AI-driven sales coaching platform providing real-time conversational guidance during live client calls, reducing response hesitation by ~45%",
-    tech: ["React", "NLU", "Speech-to-Text", "AI APIs", "WebSockets"],
+    description: "Production-ready enterprise AI sales coaching platform that joins meetings in real-time, analyzes conversations, and delivers instant coaching insights. Achieved 64% HTML size reduction and 400ms→0ms page transitions through client-side caching. Two-tier architecture with Flask frontend and Railway backend supporting 50+ API endpoints, 14-table PostgreSQL schema, and Socket.IO real-time updates with 10ms transcript batching.",
+    tech: ["Flask", "Python", "Socket.IO", "PostgreSQL", "SQLAlchemy", "Groq API", "OpenAI GPT-4o", "Recall.ai", "Stripe", "JavaScript", "Gunicorn", "Railway", "Replit"],
     status: "LIVE",
     thumbnailPoster: "/images/Saleside.jpg",
+    slug: "saleside",
+    sections: [
+      {
+        type: "image",
+        src: "/images/saleside-real-time-coaching.png", // ALT: Live meeting interface showing real-time transcript with AI coaching suggestions appearing alongside
+        title: "Real-Time AI Meeting Coaching",
+        text: "Built live meeting transcription system with speaker identification and instant AI-powered objection handling suggestions. Call stage detection (Discovery, Qualification, Presentation, Objection Handling, Closing) provides contextual guidance. Smart sales rep filtering prevents AI coaching on internal team conversations. Sub-second responses via Groq's ultra-fast LLM inference."
+      },
+      {
+        type: "image",
+        src: "/images/saleside-architecture.png", // ALT: System architecture diagram showing Flask (Replit) frontend, Railway backend, Socket.IO, and AI integrations
+        title: "Two-Tier Microservice Architecture",
+        text: "Distributed system with Flask application on Replit for UI/UX and Railway-hosted microservice for bot orchestration. Socket.IO with 15-second polling fallback ensures reliable real-time communication. Benefits: independent scaling, specialized server optimization, and fault tolerance preventing complete system failure."
+      },
+      {
+        type: "image",
+        src: "/images/saleside-performance.png", // ALT: Performance metrics dashboard or before/after comparison showing 64% HTML reduction
+        title: "Performance Optimization: 64% Size Reduction",
+        text: "Optimized from 168KB single-file (3,422 lines) to 60KB HTML + 17KB CSS + 79KB JS with cache busting versioning (v2.9). Implemented LocalStorage caching with 5-minute expiration reducing page transitions from 400ms to instant. Features 10ms transcript batching, concurrent request handling with ThreadPoolExecutor (10-worker pool), and automatic cancellation of outdated LLM requests."
+      },
+      {
+        type: "image",
+        src: "/images/saleside-meeting-summary.png", // ALT: Meeting summary page showing AI-generated summary, sentiment analysis, key takeaways, follow-up suggestions
+        title: "AI-Powered Meeting Intelligence",
+        text: "Automatic meeting summary generation using OpenAI GPT-4o with sentiment analysis, engagement tracking, and key takeaway extraction. Customer question detection with categorization and follow-up suggestion generation. Comprehensive 14-table database schema supporting conversation archive, coaching responses, tags, comments, and action tasks."
+      },
+      {
+        type: "image",
+        src: "/images/saleside-coach-config.png", // ALT: Coach configuration interface showing customizable AI settings, company context, value proposition, objection handling frameworks
+        title: "Customizable AI Coach Configuration",
+        text: "Per-user AI coaching style customization with company context, value proposition settings, product descriptions, and technical specifications. Custom objection handling frameworks, competitor comparison data, and case studies integration. Call stage definitions with stage-specific guidance for tailored coaching experiences."
+      },
+      {
+        type: "image",
+        src: "/images/saleside-enterprise.png", // ALT: Organization management dashboard showing multi-tenant setup, user roles, Stripe subscription management
+        title: "Enterprise Multi-Tenant SaaS",
+        text: "Built multi-organization support with seat-based licensing ($50/seat) and 7-day trial management. Role-based access control (Owner/Admin/Member) with user management dashboard. Complete Stripe integration for subscriptions, checkout flows, and customer portal. Organization-level data isolation ensuring secure multi-tenancy."
+      }
+    ],
   },
   {
     title: "iDARA",
@@ -128,11 +225,50 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Navigator AI",
-    description: "Treasury management web app with invoice generation, cheque printing, TVA/tax calculation, and multi-settlement tracking",
-    tech: ["React", "Express.js", "SQL", "REST APIs", "Git"],
-    status: "DEV",
+    title: "StrategyNavigator.ai",
+    description: "Full-stack enterprise SaaS strategic planning platform guiding businesses through structured 5-step workflow (BHAG → Foundations → SWOT → Goals → Action Plan). Built with 65+ reusable components, 9-table PostgreSQL schema with 10+ relational mappings, and complete PayPal subscription integration. Features real-time auto-save, PDF export, team collaboration, BI platform integrations, and OpenAI-powered content enhancement.",
+    tech: ["React 18", "TypeScript", "Node.js", "Express", "PostgreSQL", "Drizzle ORM", "TanStack Query", "Radix UI", "PayPal API", "OpenAI", "Vite", "Stripe", "SendGrid"],
+    status: "LIVE",
     thumbnailPoster: "/images/NavigatorAI.jpg",
+    slug: "strategy-navigator",
+    sections: [
+      {
+        type: "image",
+        src: "/images/strategynav-workflow.png", // ALT: 5-step strategic planning workflow interface showing BHAG, Foundations, SWOT Analysis, Strategic Goals, and Tactical Action Plan steps
+        title: "Structured 5-Step Planning Workflow",
+        text: "Built comprehensive strategic planning system guiding users through BHAG definition, foundations (vision/mission), SWOT analysis, strategic goals, and tactical action plans. Features progress tracking, step validation, multi-faceted data capture with 15+ core fields, unlimited goals and action items. PDF export generates professional strategic plan documents."
+      },
+      {
+        type: "image",
+        src: "/images/strategynav-paypal-integration.png", // ALT: PayPal subscription management interface showing Professional and Enterprise plans with pricing
+        title: "Complete PayPal Integration Across Environments",
+        text: "Implemented full PayPal subscription system with seamless operation in development (Sandbox API with optional SKIP_PAYMENT bypass) and production (Live API with signature validation). Features subscription lifecycle management, multiple tier support (Professional & Enterprise), webhook event handling for activation/cancellation/renewal, customer portal integration, and automated plan synchronization scripts."
+      },
+      {
+        type: "image",
+        src: "/images/strategynav-database-architecture.png", // ALT: Database schema diagram or code showing 9 tables with relationships for users, plans, subscriptions, teams, BI integrations
+        title: "Scalable Database Architecture",
+        text: "Built 9-table PostgreSQL schema with complex relationships supporting users, strategic plans, subscriptions, team members, and BI integrations. 26+ exported schemas for type-safe validation. JSONB field types enable flexible storage of complex structures (goals, action items, SWOT data). Real-time auto-save functionality prevents data loss. Connection pooling ensures efficient database operations."
+      },
+      {
+        type: "image",
+        src: "/images/strategynav-ai-integration.png", // ALT: AI assistance interface showing OpenAI-powered content improvement suggestions for vision/mission statements
+        title: "OpenAI-Powered Content Enhancement",
+        text: "Integrated OpenAI API for AI-powered enhancement of vision and mission statements, business terminology definitions, and context-aware suggestions. Custom AI assistance hooks provide seamless frontend integration with smart recommendations throughout the planning workflow."
+      },
+      {
+        type: "image",
+        src: "/images/strategynav-collaboration.png", // ALT: Team collaboration interface showing invite system, role-based permissions, and team member management
+        title: "Team Collaboration & Role-Based Access",
+        text: "Built complete team collaboration system with invite functionality and role-based permissions. Email integration via SendGrid for team invitations and notifications. WebSocket service enables real-time updates across team members. Multi-user support with secure session management backed by PostgreSQL session store for horizontal scaling."
+      },
+      {
+        type: "image",
+        src: "/images/strategynav-bi-integrations.png", // ALT: Business Intelligence integrations dashboard showing connections to Power BI, Tableau, Looker, Google Analytics
+        title: "Business Intelligence Platform Integrations",
+        text: "Comprehensive BI platform support with connections to Power BI, Tableau, Looker, and Google Analytics. 3 dedicated BI-related tables (connections, dashboards, metrics) for analytics integration. Enables strategic plans to be connected with live business metrics and performance dashboards."
+      }
+    ],
   },
   
 ];
@@ -149,13 +285,18 @@ export const skills: Skill[] = [
   { name: "ANGULAR", level: 75, category: "frontend" },
   { name: "HTML/CSS", level: 85, category: "frontend" },
   { name: "UI/UX DESIGN", level: 80, category: "frontend" },
+  { name: "TAILWIND CSS", level: 88, category: "frontend" },
+  { name: "REACT FLOW", level: 80, category: "frontend" },
   
   // Backend
   { name: "NODE.JS", level: 88, category: "backend" },
   { name: "EXPRESS.JS", level: 90, category: "backend" },
+  { name: "FASTAPI", level: 85, category: "backend" },
   { name: "SPRING BOOT", level: 82, category: "backend" },
   { name: "REDIS", level: 85, category: "backend" },
-  { name: "SQL", level: 80, category: "backend" },
+  { name: "MONGODB", level: 85, category: "backend" },
+  { name: "POSTGRESQL", level: 88, category: "backend" },
+  { name: "DRIZZLE ORM", level: 82, category: "backend" },
   
   // Tools
   { name: "GIT", level: 92, category: "tools" },
@@ -163,12 +304,15 @@ export const skills: Skill[] = [
   { name: "CI/CD", level: 80, category: "tools" },
   { name: "SELENIUM", level: 78, category: "tools" },
   { name: "QDRANT", level: 82, category: "tools" },
+  { name: "WEBSOCKETS", level: 85, category: "tools" },
   { name: "REST APIS", level: 88, category: "tools" },
+  { name: "STRIPE API", level: 85, category: "tools" },
+  { name: "OPENAI API", level: 88, category: "tools" },
   { name: "AGILE/SCRUM", level: 85, category: "tools" },
   
   // Languages
   { name: "JAVASCRIPT", level: 92, category: "languages" },
-  { name: "TYPESCRIPT", level: 85, category: "languages" },
+  { name: "TYPESCRIPT", level: 88, category: "languages" },
   { name: "PYTHON", level: 88, category: "languages" },
   { name: "JAVA", level: 80, category: "languages" },
   { name: "C++", level: 75, category: "languages" },
@@ -178,10 +322,10 @@ export const skills: Skill[] = [
 export const experiences: Experience[] = [
   {
     company: "EverythingToGain",
-    role: "Junior Software Engineer",
+    role: "Full Stack Engineer",
     period: "Aug 2025 - Oct 2025",
     description:
-      "Integrated automated CI/CD pipelines and upgraded data storage architecture using Qdrant and Redis, enhancing real-time search capabilities and reducing retrieval latency for high-traffic features. Collaborated with development, QA, and DevOps teams across staging and production environments.",
+      "Contributed 25% of JourneyAI codebase serving 10 enterprise clients with 98% uptime. Implemented sophisticated RAG pipeline with multi-collection vector search (Qdrant), session snapshots/forking system, and background worker infrastructure (ARQ/Redis). Built complete Stripe subscription integration with webhook lifecycle management. Developed session-aware WebSocket architecture with event batching and dynamic component rendering system (70+ components). Integrated automated CI/CD pipelines across staging and production environments.",
     color: "border-primary",
   },
   {
