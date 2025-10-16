@@ -102,7 +102,6 @@ export default function ProjectDetailPage({ params }: PageProps) {
           <h1 className="font-pixel text-3xl md:text-4xl text-primary">{project.title}</h1>
           <Badge variant="secondary" className="font-pixel text-xs">{project.status}</Badge>
         </div>
-        <p className="text-muted-foreground mt-3 max-w-3xl">{project.description}</p>
       </header>
 
       <section className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -110,8 +109,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
           <div className="rounded-md border-2 border-primary/50 bg-card/60 p-4">
             <h2 className="font-pixel text-secondary text-lg mb-3">Overview</h2>
             <p className="text-sm text-muted-foreground">
-              This page highlights key details about the project. Additional sections such as features,
-              challenges, architecture, links, and screenshots can be added later as needed.
+            {project.description}
             </p>
           </div>
 

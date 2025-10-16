@@ -83,10 +83,49 @@ export const projects: Project[] = [
   },
   {
     title: "iDARA",
-    description: "Internal VFX platform with automated task assignment, ML-powered difficulty estimation, and unified photogrammetry/motion reconstruction pipeline",
-    tech: ["React", "TypeScript", "MongoDB", "Express", "FastAPI", "PyTorch", "CI/CD", "Docker"],
-    status: "DEV",
+    description: "Full-stack VFX production platform with Ftrack integration, ML-powered complexity estimation, and automated task assignment. Built 34+ React components, 36+ API endpoints, and multi-tier caching architecture. Currently piloted by 2+ VFX studios after Paris convention presentation.",
+    tech: ["React", "TypeScript", "MongoDB", "Express.js", "FastAPI", "PyTorch", "Redis", "Ftrack SDK", "JWT Auth", "MFA", "Docker", "CI/CD"],
+    status: "BETA",
     thumbnailPoster: "/images/idara_logo_dark_background.png",
+    slug: "idara",
+    sections: [
+      {
+        type: "image",
+        src: "/images/idara-dashboard.png", // ALT: Main project dashboard showing Ftrack task integration with real-time status updates
+        title: "Ftrack Integration & Project Dashboard",
+        text: "Optimized Ftrack SDK integration with batch query optimization reducing API calls from N+1 to 2 queries per project load. Dynamic session management per user with field-specific queries minimizing payload size and latency."
+      },
+      {
+        type: "image",
+        src: "/images/idara-architecture.png", // ALT: System architecture diagram or code structure showing the modular backend (controllers, routes, middlewares folders)
+        title: "Modular Architecture",
+        text: "Built modular MERN stack with 14 controllers, 8 route modules, and 3 middleware layers. Implemented JWT authentication with MFA support, role-based access control, and secure session management across 36+ RESTful API endpoints."
+      },
+      {
+        type: "image",
+        src: "/images/idara-auth-flow.png", // ALT: Multi-step registration/authentication pages showing MFA setup
+        title: "Authentication & Security",
+        text: "Designed complete authentication flow with multi-step registration, MFA setup, and secure credential management. Custom UI/UX across 7 auth-related pages with responsive design using Material-UI and Tailwind CSS."
+      },
+      {
+        type: "image",
+        src: "/images/idara-caching.png", // ALT: Code snippet or diagram showing caching architecture (Redis + in-memory cache)
+        title: "Multi-Tier Caching System",
+        text: "Integrated Redis distributed caching with in-memory LRU cache for ML feature extraction and Ftrack API responses. Implemented cache invalidation strategy with TTL, reducing computational overhead for repeated queries."
+      },
+      {
+        type: "image",
+        src: "/images/idara-mock-data.png", // ALT: Screenshot showing the mock data system or demo mode with VFX shots
+        title: "Comprehensive Mock Data System",
+        text: "Created production-grade mock data system with 400+ shots across 3 VFX projects for NDA-compliant demonstrations. Automatic API fallback enabling offline presentations while protecting client-sensitive material."
+      },
+      {
+        type: "image",
+        src: "/images/idara-admin-dashboard.png", // ALT: Admin dashboard showing organization management, user roles, or message/feedback systems
+        title: "Organization Management",
+        text: "Built complete admin dashboard with organization management, collaborator role assignment, message systems, and feedback tracking. Designed for scalability to support multiple VFX production houses."
+      }
+    ],
   },
   {
     title: "Navigator AI",
@@ -150,7 +189,7 @@ export const experiences: Experience[] = [
     role: "Tech Lead",
     period: "May 2025 - Jul 2025",
     description:
-      "Directed development of an internal web platform with automated task assignment and ML-powered difficulty estimation. Spearheaded cross-functional integration of photogrammetry and motion reconstruction outputs, streamlining VFX production timelines.",
+      "Led full-stack development of internal VFX production platform (iDARA) building 34+ React components and 36+ API endpoints. Implemented optimized Ftrack SDK integration with batch query optimization and multi-tier caching (Redis + in-memory). Architected JWT authentication with MFA, role-based access control, and comprehensive mock data system. Platform currently piloted by 2+ VFX studios after successful Paris convention presentation.",
     color: "border-secondary",
   },
   {
