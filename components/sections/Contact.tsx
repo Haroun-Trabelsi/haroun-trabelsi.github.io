@@ -183,16 +183,6 @@ export function Contact() {
                 className="font-pixel text-xs pixel-press"
                 asChild
               >
-                <a href="https://haroun-trabelsi.github.io/" target="_blank" rel="noopener noreferrer">
-                  WEBSITE
-                </a>
-              </Button>
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                className="font-pixel text-xs pixel-press"
-                asChild
-              >
                 <a href="https://linkedin.com/in/harountrabelsi1" target="_blank" rel="noopener noreferrer">
                   LINKEDIN
                 </a>
