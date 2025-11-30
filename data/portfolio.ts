@@ -224,52 +224,6 @@ export const projects: Project[] = [
       }
     ],
   },
-  {
-    title: "StrategyNavigator.ai",
-    description: "Full-stack enterprise SaaS strategic planning platform guiding businesses through structured 5-step workflow (BHAG → Foundations → SWOT → Goals → Action Plan). Built with 65+ reusable components, 9-table PostgreSQL schema with 10+ relational mappings, and complete PayPal subscription integration. Features real-time auto-save, PDF export, team collaboration, BI platform integrations, and OpenAI-powered content enhancement.",
-    tech: ["React 18", "TypeScript", "Node.js", "Express", "PostgreSQL", "Drizzle ORM", "TanStack Query", "Radix UI", "PayPal API", "OpenAI", "Vite", "Stripe", "SendGrid"],
-    status: "LIVE",
-    thumbnailPoster: "/images/NavigatorAI.jpg",
-    slug: "strategy-navigator",
-    sections: [
-      {
-        type: "image",
-        src: "/images/strategynav-workflow.png", // ALT: 5-step strategic planning workflow interface showing BHAG, Foundations, SWOT Analysis, Strategic Goals, and Tactical Action Plan steps
-        title: "Structured 5-Step Planning Workflow",
-        text: "Built comprehensive strategic planning system guiding users through BHAG definition, foundations (vision/mission), SWOT analysis, strategic goals, and tactical action plans. Features progress tracking, step validation, multi-faceted data capture with 15+ core fields, unlimited goals and action items. PDF export generates professional strategic plan documents."
-      },
-      {
-        type: "image",
-        src: "/images/strategynav-paypal-integration.png", // ALT: PayPal subscription management interface showing Professional and Enterprise plans with pricing
-        title: "Complete PayPal Integration Across Environments",
-        text: "Implemented full PayPal subscription system with seamless operation in development (Sandbox API with optional SKIP_PAYMENT bypass) and production (Live API with signature validation). Features subscription lifecycle management, multiple tier support (Professional & Enterprise), webhook event handling for activation/cancellation/renewal, customer portal integration, and automated plan synchronization scripts."
-      },
-      {
-        type: "image",
-        src: "/images/strategynav-database-architecture.png", // ALT: Database schema diagram or code showing 9 tables with relationships for users, plans, subscriptions, teams, BI integrations
-        title: "Scalable Database Architecture",
-        text: "Built 9-table PostgreSQL schema with complex relationships supporting users, strategic plans, subscriptions, team members, and BI integrations. 26+ exported schemas for type-safe validation. JSONB field types enable flexible storage of complex structures (goals, action items, SWOT data). Real-time auto-save functionality prevents data loss. Connection pooling ensures efficient database operations."
-      },
-      {
-        type: "image",
-        src: "/images/strategynav-ai-integration.png", // ALT: AI assistance interface showing OpenAI-powered content improvement suggestions for vision/mission statements
-        title: "OpenAI-Powered Content Enhancement",
-        text: "Integrated OpenAI API for AI-powered enhancement of vision and mission statements, business terminology definitions, and context-aware suggestions. Custom AI assistance hooks provide seamless frontend integration with smart recommendations throughout the planning workflow."
-      },
-      {
-        type: "image",
-        src: "/images/strategynav-collaboration.png", // ALT: Team collaboration interface showing invite system, role-based permissions, and team member management
-        title: "Team Collaboration & Role-Based Access",
-        text: "Built complete team collaboration system with invite functionality and role-based permissions. Email integration via SendGrid for team invitations and notifications. WebSocket service enables real-time updates across team members. Multi-user support with secure session management backed by PostgreSQL session store for horizontal scaling."
-      },
-      {
-        type: "image",
-        src: "/images/strategynav-bi-integrations.png", // ALT: Business Intelligence integrations dashboard showing connections to Power BI, Tableau, Looker, Google Analytics
-        title: "Business Intelligence Platform Integrations",
-        text: "Comprehensive BI platform support with connections to Power BI, Tableau, Looker, and Google Analytics. 3 dedicated BI-related tables (connections, dashboards, metrics) for analytics integration. Enables strategic plans to be connected with live business metrics and performance dashboards."
-      }
-    ],
-  },
   
 ];
 

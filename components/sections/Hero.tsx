@@ -35,16 +35,16 @@ export function Hero() {
         </div>
         
         <h1 className="font-pixel text-4xl md:text-6xl text-primary mb-4 glitch">HAROUN TRABELSI</h1>
-        <h2 className="font-pixel text-2xl md:text-3xl text-secondary mb-6">JUNIOR SOFTWARE ENGINEER</h2>
+        <h2 className="font-pixel text-2xl md:text-3xl text-secondary mb-6">SOFTWARE ENGINEER</h2>
         
         <p className="text-muted-foreground text-xl mb-4 leading-relaxed">
-          Adaptable and self-driven engineer with strong full-stack development experience and hands-on exposure to real-world projects. Building <span className="text-primary font-semibold">scalable web apps</span>, managing <span className="text-primary font-semibold">databases</span>, and leading team projects.
+          Adaptable and self-driven engineer with strong full-stack development experience and hands-on exposure to real-world projects. Building scalable web apps, managing databases, and leading team projects.
         </p>
         
         <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-          Skilled in React, Node.js, Spring Boot, and CI/CD<br/>
+          Skilled in<b className="text-primary"> React, Next.JS, Express.js and MongoDB</b><br/>
           Passionate about impactful software and clean architecture<br/>
-          Expert in Git, Docker, Selenium, and REST APIs
+          <b className="text-primary">Expert</b> in Git, Docker, Selenium, and REST APIs
         </p>
         
         <div className="flex flex-wrap gap-4">
