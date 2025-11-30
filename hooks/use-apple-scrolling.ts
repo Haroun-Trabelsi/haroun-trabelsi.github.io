@@ -23,7 +23,11 @@ export function useAppleScrolling() {
     const updateActive = () => {
       const els = getEls();
       if (!els.length) return;
- 
+      // If user is at the very top (scrollY <= 50), force "HERO" as active
+      if (window.scrollY <= 50) {
+        setCurrentSection(0);
+        return;
+      }
       // If user is at the very bottom, force "CONTACT" as active
       const doc = document.documentElement;
       const atBottom = Math.ceil(window.scrollY + window.innerHeight) >= doc.scrollHeight - 1;
@@ -32,11 +36,7 @@ export function useAppleScrolling() {
         return;
       }
 
-      // If user is at the very top (scrollY <= 50), force "HERO" as active
-      if (window.scrollY <= 50) {
-        setCurrentSection(0);
-        return;
-      }
+      
  
       const viewportCenter = window.innerHeight / 2;
       let bestIdx = 0;

@@ -9,7 +9,7 @@ export function StatsPanel() {
       <div className="space-y-3">
         <div className="flex justify-between items-center">
           <span className="text-muted-foreground text-sm">PROJECTS:</span>
-          <AnimatedCounter end={15} suffix="+" />
+          <AnimatedCounter end={30} suffix="+" />
         </div>
         <div className="flex justify-between items-center">
           <span className="text-muted-foreground text-sm">EXPERIENCE:</span>

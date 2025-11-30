@@ -10,13 +10,13 @@ export function About() {
       <div className="fade-in-scroll" data-scroll-animate id="about-text">
         <h3 className="font-pixel text-secondary text-lg mb-4">ABOUT.EXE</h3>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          I'm an adaptable and self-driven Junior Software Engineer with strong full-stack development experience
+          I'm an adaptable and self-driven <b className="text-primary">Software Engineer</b> with strong full-stack development experience
           and hands-on exposure to real-world projects. My journey has taken me from crafting treasury management
           systems to building AI-powered sales platforms and VFX project management tools.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Skilled in building scalable web applications, managing databases, and leading team projects with Git.
-          I specialize in React, Node.js, and modern technologies, but I'm always eager to learn and adapt.
+          Skilled in  building scalable web applications, managing databases, and leading team projects with Git.
+          I specialize in <b className="text-primary">ReactJS, Next.js, Express.js and modern technologies</b>, but I'm always eager to learn and adapt.
           Passionate about impactful software, clean architecture, and collaborative innovation.
         </p>
         <div className="flex flex-wrap gap-2">

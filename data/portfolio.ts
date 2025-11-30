@@ -274,7 +274,7 @@ export const projects: Project[] = [
 ];
 
 export const companies: Company[] = [
-  { name: "EverythingToGain", role: "Junior Software Engineer", logo: "", color: "text-primary" },
+  { name: "Everything To Gain", role: "Software Engineer", logo: "", color: "text-primary" },
   { name: "Vision Age VFX", role: "Tech Lead", logo: "", color: "text-secondary" },
   { name: "Infotec", role: "Software Engineering Intern", logo: "", color: "text-tertiary" },
 ];
