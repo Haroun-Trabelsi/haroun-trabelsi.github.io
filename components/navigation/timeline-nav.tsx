@@ -88,24 +88,24 @@ export function TimelineNav() {
           <SheetContent side="left" className="w-72 bg-card/95 backdrop-blur-md border-r border-primary/30">
             <div className="flex flex-col h-full py-4">
               {/* Mobile Logo */}
-              <div className="font-pixel text-primary text-sm mb-6">
+              <div className="font-pixel text-center text-primary mb-20 text-sm mb-6">
                 {`<DEV/>`}
               </div>
 
               {/* Mobile Timeline Navigation */}
-              <div className="flex flex-col space-y-6 flex-1">
+              <div className="flex flex-col space-y-20 flex-1">
                 {sections.map((section, index) => (
                   <div key={section.id} className="relative flex items-center h-8">
                     {/* Timeline line - centered */}
                     {index < sections.length - 1 && (
-                      <div className="absolute left-1/2 top-8 transform -translate-x-1/2 w-px h-6 bg-muted/40" />
+                      <div className="absolute left-[30%] top-8 transform -translate-x-1/2 w-px h-6 bg-muted/40" />
                     )}
                     
                     {/* Timeline dot - centered */}
                     <button
                       onClick={() => handleGo(index)}
                       aria-current={currentSection === index ? "page" : undefined}
-                      className={`absolute left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full border transition-all duration-300 z-10 ${
+                      className={`absolute left-[30%] transform -translate-x-1/2 w-3 h-3 rounded-full border transition-all duration-300 z-10 ${
                         currentSection === index
                           ? `bg-primary border-primary scale-125 shadow-md shadow-primary/40`
                           : `bg-card ${section.color} hover:bg-primary/20`

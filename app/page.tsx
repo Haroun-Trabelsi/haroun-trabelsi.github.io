@@ -91,7 +91,7 @@ export default function Portfolio() {
       <TimelineNav />
 
       {/* HERO */}
-      <section id="hero" data-scroll-animate className={`container section-anchor mx-auto px-4 min-h-screen flex items-center ${getSectionAnim("hero")}`}>
+      <section id="hero" data-scroll-animate className={`mt-16 sm:mt-0 container section-anchor mx-auto px-4 min-h-screen flex items-center ${getSectionAnim("hero")}`}>
         <Hero />
       </section>
 
@@ -121,7 +121,7 @@ export default function Portfolio() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" data-scroll-animate className={`container section-anchor mx-auto px-4 pt-24 md:pt-32 ${getSectionAnim("contact")}`}>
+      <section id="contact" data-scroll-animate className={`container section-anchor mx-auto pt-24 md:pt-32 ${getSectionAnim("contact")}`}>
         <Contact />
       </section>
       </div>

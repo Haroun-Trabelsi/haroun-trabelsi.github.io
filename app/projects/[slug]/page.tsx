@@ -86,7 +86,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
                 src={imageUrl}
                 alt={`${project.title} hero image`}
                 fill
-                className="object-cover opacity-60 saturate-75 contrast-125"
+                className="object-cover saturate-75 contrast-125"
                 sizes="100vw"
                 priority
               />
