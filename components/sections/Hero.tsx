@@ -35,16 +35,21 @@ export function Hero() {
         </div>
         
         <h1 className="font-pixel text-4xl md:text-6xl text-primary mb-4 glitch">HAROUN TRABELSI</h1>
-        <h2 className="font-pixel text-2xl md:text-3xl text-secondary mb-6">SOFTWARE ENGINEER</h2>
-        
+        <h2 className="font-pixel text-2xl md:text-3xl text-secondary mb-4">SOFTWARE ENGINEER</h2>
+
+        <div className="flex items-center gap-2 mb-6">
+          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+          <span className="text-muted-foreground text-sm">Currently building <b className="text-primary">JourneyAI</b> at <b className="text-primary">Skaled</b></span>
+        </div>
+
         <p className="text-muted-foreground text-xl mb-4 leading-relaxed">
-          Adaptable and self-driven engineer with strong full-stack development experience and hands-on exposure to real-world projects. Building scalable web apps, managing databases, and leading team projects.
+          Full-stack engineer currently building an AI sales platform serving 10+ enterprise clients. 15 months of shipping production software across AI/ML pipelines, real-time systems, and enterprise SaaS.
         </p>
-        
+
         <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-          Skilled in<b className="text-primary"> React, Next.JS, Express.js and MongoDB</b><br/>
-          Passionate about impactful software and clean architecture<br/>
-          <b className="text-primary">Expert</b> in Git, Docker, Selenium, and REST APIs
+          Skilled in<b className="text-primary"> React, TypeScript, FastAPI, and Node.js</b><br/>
+          From intern to Tech Lead in 6 months — now building at scale<br/>
+          Proficient in <b className="text-primary">Docker, CI/CD, WebSockets, and AI integrations</b>
         </p>
         
         <div className="flex flex-wrap gap-4">

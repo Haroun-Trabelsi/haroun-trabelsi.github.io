@@ -16,6 +16,7 @@ export type Project = {
   thumbnailVideo?: string; // list card hover video
   overviewVideo?: string; // detail hero video
   sections?: ProjectMedia[]; // alternating media/text sections
+  impacts?: string[]; // key metrics displayed as badges on cards
 };
 
 export type Company = {
@@ -43,9 +44,10 @@ export const projects: Project[] = [
   {
     title: "JourneyAI",
     image: "/images/journeylanding.png",
-    description: "Production-grade AI sales assistant platform serving 10 enterprise clients with 98% uptime. Built sophisticated RAG pipeline with multi-collection vector search, real-time WebSocket streaming, session snapshots/forking system, and comprehensive subscription management. Contributed 25% of codebase including semantic search engine, background worker system, and Stripe integration.",
+    description: "Production-grade AI sales assistant platform serving 10+ enterprise clients with 98% uptime, developed over 8 months across EverythingToGain and Skaled (ongoing). Built sophisticated RAG pipeline with multi-collection vector search, real-time WebSocket streaming, session snapshots/forking system, and comprehensive subscription management. Contributed 25% of codebase including semantic search engine, background worker system, and Stripe integration.",
     tech: ["React 19", "TypeScript", "FastAPI", "MongoDB", "Qdrant", "Redis", "OpenAI GPT-4", "WebSockets", "ARQ", "Stripe", "Docker", "Pydantic", "Beanie ODM"],
     status: "LIVE",
+    impacts: ["10+ Enterprise Clients", "98% Uptime", "70+ Components"],
     thumbnailPoster: "/images/journeylanding.png",
     slug: "journeyai",
     sections: [
@@ -92,6 +94,7 @@ export const projects: Project[] = [
     description: "Enterprise-grade workflow automation platform with visual drag-and-drop builder and sophisticated export ecosystem. Built complete transformation system converting internal workflows to 3 platform-specific formats (Zapier, Make, n8n) with multi-mode export (API-based automatic, manual JSON, webhook). Features topological sorting for dependency resolution, variable resolution system, and real-time execution engine.",
     tech: ["React", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Drizzle ORM", "React Flow", "Passport.js", "Google OAuth", "OpenAI GPT-4", "shadcn/ui", "Tailwind CSS"],
     status: "LIVE",
+    impacts: ["3 Platform Exports", "Real-Time Execution"],
     image: "/images/StrategicAI.jpg",
     slug: "strategicai",
     sections: [
@@ -132,6 +135,7 @@ export const projects: Project[] = [
     description: "Production-ready enterprise AI sales coaching platform that joins meetings in real-time, analyzes conversations, and delivers instant coaching insights. Achieved 64% HTML size reduction and 400ms→0ms page transitions through client-side caching. Two-tier architecture with Flask frontend and Railway backend supporting 50+ API endpoints, 14-table PostgreSQL schema, and Socket.IO real-time updates with 10ms transcript batching.",
     tech: ["Flask", "Python", "Socket.IO", "PostgreSQL", "SQLAlchemy", "Groq API", "OpenAI GPT-4o", "Recall.ai", "Stripe", "JavaScript", "Gunicorn", "Railway", "Replit"],
     status: "LIVE",
+    impacts: ["64% Size Reduction", "0ms Page Transitions", "50+ Endpoints"],
     image: "/images/saleside/image (6).png",
     slug: "saleside",
     sections: [
@@ -178,6 +182,7 @@ export const projects: Project[] = [
     description: "Full-stack VFX production platform with Ftrack integration, ML-powered complexity estimation, and automated task assignment. Built 34+ React components, 36+ API endpoints, and multi-tier caching architecture. Currently piloted by 2+ VFX studios after Paris convention presentation.",
     tech: ["React", "TypeScript", "MongoDB", "Express.js", "FastAPI", "PyTorch", "Redis", "Ftrack SDK", "JWT Auth", "MFA", "Docker", "CI/CD"],
     status: "BETA",
+    impacts: ["2+ VFX Studios", "34+ Components", "36+ Endpoints"],
     image: "/images/idara_logo_dark_background.png",
     slug: "idara"
   },
@@ -185,7 +190,8 @@ export const projects: Project[] = [
 ];
 
 export const companies: Company[] = [
-  { name: "Everything To Gain", role: "Software Engineer", logo: "", color: "text-primary" },
+  { name: "Skaled", role: "Software Engineer", logo: "", color: "text-primary" },
+  { name: "Everything To Gain", role: "Full Stack Engineer", logo: "", color: "text-primary" },
   { name: "Vision Age VFX", role: "Tech Lead", logo: "", color: "text-secondary" },
   { name: "Infotec", role: "Software Engineering Intern", logo: "", color: "text-tertiary" },
 ];
@@ -232,11 +238,19 @@ export const skills: Skill[] = [
 
 export const experiences: Experience[] = [
   {
+    company: "Skaled",
+    role: "Software Engineer",
+    period: "Oct 2025 - Present",
+    description:
+      "Continuing development of JourneyAI, scaling the platform to 10+ enterprise clients with 98% uptime. Expanded the RAG pipeline with advanced multi-collection vector search optimizations, built real-time WebSocket streaming with session-aware architecture and event batching, and grew the dynamic component rendering system to 70+ components. Driving feature development across the full stack including semantic search improvements, background worker optimization (ARQ/Redis), and Stripe subscription lifecycle management.",
+    color: "border-primary",
+  },
+  {
     company: "EverythingToGain",
     role: "Full Stack Engineer",
     period: "Aug 2025 - Oct 2025",
     description:
-      "Contributed 25% of JourneyAI codebase serving 10 enterprise clients with 98% uptime. Implemented sophisticated RAG pipeline with multi-collection vector search (Qdrant), session snapshots/forking system, and background worker infrastructure (ARQ/Redis). Built complete Stripe subscription integration with webhook lifecycle management. Developed session-aware WebSocket architecture with event batching and dynamic component rendering system (70+ components). Integrated automated CI/CD pipelines across staging and production environments.",
+      "Launched JourneyAI from early development to production, contributing 25% of the initial codebase. Built the core RAG pipeline with Qdrant vector search, session snapshots/forking system, and complete Stripe subscription integration with webhook lifecycle management. Established CI/CD pipelines across staging and production environments.",
     color: "border-primary",
   },
   {

@@ -74,17 +74,20 @@ export function Projects() {
 
       {/* Call to action */}
       <div className="text-center pt-8">
-        <motion.div
+        <motion.a
+          href="https://github.com/haroun-trabelsi"
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="inline-flex items-center space-x-4 bg-card/50 border border-primary/20 rounded-lg px-5 py-3"
+          className="inline-flex items-center space-x-4 bg-card/50 border border-primary/20 rounded-lg px-5 py-3 hover:border-primary/40 transition-colors"
         >
           <span className="font-pixel text-primary text-xs">MORE PROJECTS</span>
           <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
           <span className="text-muted-foreground text-sm">Available on GitHub</span>
-        </motion.div>
+        </motion.a>
       </div>
     </div>
   );

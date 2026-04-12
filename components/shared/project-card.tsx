@@ -15,6 +15,7 @@ export function ProjectCard({
   image,
   slug,
   thumbnailPoster,
+  impacts,
 }: {
   title: string;
   description: string;
@@ -23,6 +24,7 @@ export function ProjectCard({
   image?: string;
   slug?: string;
   thumbnailPoster?: string;
+  impacts?: string[];
 }) {
   const computedSlug = slug ? slug : slugify(title);
   const poster = thumbnailPoster || image || "/images/pixel-bg.jpg";
@@ -54,6 +56,15 @@ export function ProjectCard({
               {title}
             </h3>
           </div>
+          {impacts && impacts.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 mb-3">
+              {impacts.map((impact) => (
+                <Badge key={impact} className="bg-accent/10 text-accent border border-accent/30 font-pixel text-[0.5rem]">
+                  {impact}
+                </Badge>
+              ))}
+            </div>
+          )}
           <p className="text-muted-foreground text-base mb-4 leading-relaxed">{description}</p>
           <div className="flex flex-wrap gap-2">
             {tech.map((item: string) => (

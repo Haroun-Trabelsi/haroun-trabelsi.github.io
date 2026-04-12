@@ -76,6 +76,24 @@ export function Contact() {
         <p className="text-muted-foreground mb-8">Let's build something amazing together</p>
       </div>
 
+      <div className="max-w-2xl mx-auto mb-8 bg-card/50 border border-primary/20 rounded-lg p-5">
+        <h3 className="font-pixel text-primary text-xs mb-3">WHAT I'M LOOKING FOR</h3>
+        <ul className="text-muted-foreground text-sm space-y-2 list-none">
+          <li className="flex items-center gap-2">
+            <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
+            Full-stack or backend-heavy engineering roles
+          </li>
+          <li className="flex items-center gap-2">
+            <div className="w-1.5 h-1.5 bg-secondary rounded-full flex-shrink-0" />
+            Product-focused teams building AI/SaaS products
+          </li>
+          <li className="flex items-center gap-2">
+            <div className="w-1.5 h-1.5 bg-tertiary rounded-full flex-shrink-0" />
+            Remote-friendly, open to relocation for the right opportunity
+          </li>
+        </ul>
+      </div>
+
       <form
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto bg-card/60 border-2 border-primary p-6 md:p-8 mb-12"
@@ -175,11 +193,11 @@ export function Contact() {
       <footer className="border-t-2 border-primary bg-card/50 backdrop-blur-sm mt-16 rounded-xl">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="font-pixel text-primary text-sm">© 2025 HAROUN TRABELSI</div>
+            <div className="font-pixel text-primary text-sm">© 2026 HAROUN TRABELSI</div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                variant="ghost"
+                size="sm"
                 className="font-pixel text-xs pixel-press"
                 asChild
               >
@@ -187,9 +205,19 @@ export function Contact() {
                   LINKEDIN
                 </a>
               </Button>
-              <Button 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                variant="ghost"
+                size="sm"
+                className="font-pixel text-xs pixel-press"
+                asChild
+              >
+                <a href="https://github.com/haroun-trabelsi" target="_blank" rel="noopener noreferrer">
+                  GITHUB
+                </a>
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
                 className="font-pixel text-xs pixel-press"
                 asChild
               >

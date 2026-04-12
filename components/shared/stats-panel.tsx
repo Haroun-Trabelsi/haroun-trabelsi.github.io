@@ -13,7 +13,7 @@ export function StatsPanel() {
         </div>
         <div className="flex justify-between items-center">
           <span className="text-muted-foreground text-sm">EXPERIENCE:</span>
-          <AnimatedCounter end={2} suffix=" YRS" prefix="+" />
+          <AnimatedCounter end={15} suffix=" MOS" />
         </div>
         <div className="flex justify-between items-center">
           <span className="text-muted-foreground text-sm">EFFICIENCY GAIN:</span>

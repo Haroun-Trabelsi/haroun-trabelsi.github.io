@@ -15,7 +15,14 @@ export function Experience() {
           style={{ animationDelay: `${index * 0.2}s` }}
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-            <h3 className="font-pixel text-primary text-lg">{exp.company}</h3>
+            <div className="flex items-center gap-2">
+              <h3 className="font-pixel text-primary text-lg">{exp.company}</h3>
+              {index === 0 && (
+                <Badge className="bg-green-500/10 text-green-400 border border-green-500/30 font-pixel text-[0.5rem]">
+                  CURRENT
+                </Badge>
+              )}
+            </div>
             <Badge variant="outline" className="font-pixel text-sm w-fit">
               {exp.period}
             </Badge>

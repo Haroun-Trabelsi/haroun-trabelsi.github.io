@@ -9,8 +9,8 @@ import { SoundProvider } from "@/components/sound/sound-provider";
 
 
 export const metadata: Metadata = {
-  title: "Haroun Trabelsi — Junior Software Engineer | Tunisia",
-  description: "Adaptable and self-driven Junior Software Engineer skilled in React, Node.js, Spring Boot, and CI/CD. Building scalable web apps and impactful software solutions.",
+  title: "Haroun Trabelsi — Software Engineer | Tunisia",
+  description: "Software Engineer with 15+ months of professional experience building production AI platforms, enterprise SaaS tools, and scalable full-stack applications. Skilled in React, TypeScript, FastAPI, Node.js, and cloud infrastructure.",
   applicationName: "Haroun Trabelsi Portfolio",
   generator: "Next.js",
   icons: {
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
-    title: "Haroun Trabelsi — Junior Software Engineer",
-    description: "Skilled in building scalable web applications, managing databases, and leading team projects. Passionate about impactful software and clean architecture.",
+    title: "Haroun Trabelsi — Software Engineer",
+    description: "Software Engineer building production AI platforms and enterprise SaaS. Currently at Skaled working on JourneyAI.",
     images: [{ url: "/images/pixel-bg.jpg", width: 1200, height: 630, alt: "Portfolio background" }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Haroun Trabelsi — Junior Software Engineer",
-    description: "Building scalable web apps with React, Node.js, and modern technologies.",
+    title: "Haroun Trabelsi — Software Engineer",
+    description: "Software Engineer building production AI platforms with React, TypeScript, and FastAPI.",
     images: ["/images/pixel-bg.jpg"],
   },
 };
