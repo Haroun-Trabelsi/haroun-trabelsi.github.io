@@ -57,7 +57,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
   const imageUrl = project.image || "/images/pixel-bg.jpg";
 
   return (
-    <div className="container mx-auto px-4 py-16 md:py-24 max-w-5xl">
+    <div className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
       {/* Back link */}
       <div className="mb-6">
         <Link
@@ -117,11 +117,11 @@ export default function ProjectDetailPage({ params }: PageProps) {
       </header>
 
       {/* Overview + Tech stack inline */}
-      <div className="rounded-md border-2 border-primary/50 bg-card/60 p-4 mb-6">
-        <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
-        <div className="flex flex-wrap gap-1.5">
+      <div className="rounded-md border-2 border-primary/50 bg-card/60 p-5 md:p-6 mb-6">
+        <p className="text-base text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+        <div className="flex flex-wrap gap-2">
           {project.tech.map((t) => (
-            <Badge key={t} variant="outline" className="text-xs">
+            <Badge key={t} variant="outline" className="text-sm px-2.5 py-0.5">
               {t}
             </Badge>
           ))}
@@ -143,7 +143,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
       {project.sections && project.sections.length > 0 && (
         <div>
           <h2 className="font-pixel text-secondary text-lg mb-4">Highlights</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {project.sections.map((section, idx) => (
               <div
                 key={idx}
@@ -165,17 +165,17 @@ export default function ProjectDetailPage({ params }: PageProps) {
                         alt={section.title || `${project.title} feature ${idx + 1}`}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
                   </div>
                 </AspectRatio>
-                <div className="p-3">
-                  <h3 className="font-pixel text-primary text-xs mb-1.5">
+                <div className="p-4">
+                  <h3 className="font-pixel text-primary text-sm mb-2">
                     {section.title || "Details"}
                   </h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {section.text}
                   </p>
                 </div>
