@@ -17,6 +17,7 @@ export type Project = {
   overviewVideo?: string; // detail hero video
   sections?: ProjectMedia[]; // alternating media/text sections
   impacts?: string[]; // key metrics displayed as badges on cards
+  liveUrl?: string; // link to live project
 };
 
 export type Company = {
@@ -48,44 +49,39 @@ export const projects: Project[] = [
     tech: ["React 19", "TypeScript", "FastAPI", "MongoDB", "Qdrant", "Redis", "OpenAI GPT-4", "WebSockets", "ARQ", "Stripe", "Docker", "Pydantic", "Beanie ODM"],
     status: "LIVE",
     impacts: ["10+ Enterprise Clients", "98% Uptime", "70+ Components"],
+    liveUrl: "https://meetjourney.ai/",
     thumbnailPoster: "/images/journeylanding.png",
     slug: "journeyai",
     sections: [
       {
         type: "image",
-        src: "/images/JourneyAI/chat.png", // ALT: Real-time chat interface showing AI assistant conversation with WebSocket streaming
-        title: "Real-Time AI Chat with WebSocket Streaming",
-        text: "Built sophisticated real-time chat system with 12+ specialized AI assistants (Account Strategy, Prospecting, Research, Closing). Implemented session-aware WebSocket architecture with event batching, preventing cross-session contamination and optimizing render performance. Token-by-token streaming with function call visualization."
+        src: "/images/JourneyAI/chat.png",
+        title: "Real-Time AI Chat",
+        text: "12+ specialized AI assistants with session-aware WebSocket streaming, event batching, and token-by-token function call visualization."
       },
       {
         type: "image",
-        src: "/images/JourneyAI/share.png", // ALT: Semantic search interface or code showing RAG pipeline with Qdrant vector search
-        title: "Semantic Search Engine with RAG Pipeline",
-        text: "Implemented multi-collection vector search across Artifacts, Messages, and Organization Files using OpenAI text-embedding-3-large model. Built AI categorization system with strict JSON validation for Qdrant storage. Features score thresholding, complex multi-tenant filters, and dynamic context injection into AI prompts."
+        src: "/images/JourneyAI/share.png",
+        title: "RAG Pipeline & Semantic Search",
+        text: "Multi-collection vector search across Artifacts, Messages, and Files using OpenAI embeddings and Qdrant. Score thresholding, multi-tenant filters, and dynamic context injection."
       },
       {
         type: "image",
-        src: "/images/JourneyAI/memories.png", // ALT: Session snapshots UI showing conversation branching and forking feature
-        title: "Session Snapshots & Forking System",
-        text: "Designed conversation branching feature allowing users to save states, fork from previous messages to explore alternative paths, and restore snapshots. Maintains full conversation history with vector embeddings for contextual awareness across forked sessions."
+        src: "/images/JourneyAI/memories.png",
+        title: "Session Snapshots & Forking",
+        text: "Conversation branching with save states, fork from any message, and restore snapshots. Full history with vector embeddings for cross-session context."
       },
       {
         type: "image",
-        src: "/images/JourneyAI/Login.png", // ALT: System architecture diagram showing FastAPI, MongoDB, Qdrant, Redis, WebSocket components
-        title: "Scalable Multi-Tenant Architecture",
-        text: "Production FastAPI backend with async/await patterns, multi-tenant organization-level data isolation, and background job queue using ARQ (Redis-based). Comprehensive error handling with Loguru, RESTful API design with OpenAPI documentation, and Docker containerization for consistent deployments."
+        src: "/images/JourneyAI/Login.png",
+        title: "Multi-Tenant Architecture",
+        text: "FastAPI backend with async patterns, organization-level data isolation, ARQ job queue (Redis), Loguru logging, and Docker containerization."
       },
       {
         type: "image",
-        src: "/images/JourneyAI/chat.png", // ALT: Subscription management dashboard showing Stripe integration and pricing tiers
-        title: "Stripe Subscription Management",
-        text: "Complete Stripe integration with webhook lifecycle management, subscription tiers ($35/month Pro, $299/year), trial management, and customer portal. Automated email reports using Jinja2 templates with weekly/monthly analytics aggregation via background cron jobs."
-      },
-      {
-        type: "image",
-        src: "/images/JourneyAI/App.png", // ALT: Dynamic component rendering showing backend-driven UI updates
-        title: "Dynamic Component Rendering System",
-        text: "Built flexible JSON-to-React component engine enabling backend-driven UI updates without frontend deployments. Recursive component tree building with type-safe registry supporting 70+ components including SaveArtifactDropdown, FunctionToolCallAccordion, and EnhancedWebSearchIndicator."
+        src: "/images/JourneyAI/App.png",
+        title: "Dynamic Component Engine",
+        text: "JSON-to-React rendering system with type-safe registry supporting 70+ components. Backend-driven UI updates without frontend deployments."
       }
     ],
   },
@@ -95,38 +91,33 @@ export const projects: Project[] = [
     tech: ["React", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Drizzle ORM", "React Flow", "Passport.js", "Google OAuth", "OpenAI GPT-4", "shadcn/ui", "Tailwind CSS"],
     status: "LIVE",
     impacts: ["3 Platform Exports", "Real-Time Execution"],
+    liveUrl: "https://strategy.ai/",
     image: "/images/StrategicAI.jpg",
     slug: "strategicai",
     sections: [
       {
         type: "image",
-        src: "/images/Strategic/Builder.png", // ALT: Visual workflow builder interface with drag-and-drop nodes connected by lines, showing React Flow canvas
-        title: "Visual Workflow Builder with React Flow",
-        text: "Built drag-and-drop interface for real-time visual workflow design with dynamic node connections and dependencies. Features catalog-driven UI with platform-specific parameter configuration, allowing users to design complex multi-step automations through an intuitive visual interface."
+        src: "/images/Strategic/Builder.png",
+        title: "Visual Workflow Builder",
+        text: "Drag-and-drop interface with React Flow for visual workflow design. Catalog-driven UI with platform-specific parameter configuration for multi-step automations."
       },
       {
         type: "image",
-        src: "/images/Strategic/platforms-export.jpg", // ALT: Export interface showing multi-platform options (Zapier, Make, n8n) with export mode selection
-        title: "Sophisticated Multi-Platform Export Ecosystem",
-        text: "Developed abstract transformer architecture supporting 3 export modes: Automatic (direct API-based workflow creation), Manual (JSON export with setup instructions), and Webhook (push to custom endpoints). Platform-specific transformers handle node type detection, connection mapping, and parameter transformation for Zapier, Make, and n8n formats."
+        src: "/images/Strategic/platforms-export.jpg",
+        title: "Multi-Platform Export",
+        text: "3 export modes (Automatic API, Manual JSON, Webhook) with platform-specific transformers for Zapier, Make, and n8n. Handles node detection, connection mapping, and parameter transformation."
       },
       {
         type: "image",
-        src: "/images/Strategic/Workflow.png", // ALT: Workflow execution view showing step-by-step progress, real-time status updates, and results
-        title: "Real-Time Workflow Execution Engine",
-        text: "Built execution engine with topological sorting algorithm for dependency resolution and variable resolver system enabling dynamic data flow between steps using {{step_id.output_field}} syntax. Supports Google Docs, Gmail, OpenAI, Slack, Discord with OAuth token management and graceful error handling."
+        src: "/images/Strategic/Workflow.png",
+        title: "Execution Engine",
+        text: "Topological sorting for dependency resolution with dynamic data flow between steps. Supports Google Docs, Gmail, OpenAI, Slack, Discord with OAuth management."
       },
       {
         type: "image",
-        src: "/images/Strategic/cross-providers-sync.png", // ALT: Integration dashboard showing connected platforms: Google, OpenAI, Slack, Discord, PayPal, Stripe
-        title: "Multi-Provider OAuth & Integration System",
-        text: "Integrated multiple OAuth providers (Google OAuth 2.0) with token refresh handling and secure storage. Modular platform architecture with standardized action interfaces, catalog-driven configuration from action_catalog.json, and API key management for third-party services."
-      },
-      {
-        type: "image",
-        src: "/images/Strategic/PERN.webp", // ALT: System architecture diagram showing full-stack monorepo with shared TypeScript schemas
-        title: "Type-Safe Full-Stack Architecture",
-        text: "Full-stack TypeScript monorepo with shared schemas ensuring compile-time safety across frontend/backend. PostgreSQL with Drizzle ORM for type-safe queries, session management with PostgreSQL storage, and comprehensive error handling through centralized ErrorHandler service with transaction support."
+        src: "/images/Strategic/PERN.webp",
+        title: "Type-Safe Full-Stack",
+        text: "TypeScript monorepo with shared schemas, PostgreSQL + Drizzle ORM for type-safe queries, and centralized error handling with transaction support."
       }
     ],
   },
@@ -136,44 +127,45 @@ export const projects: Project[] = [
     tech: ["Flask", "Python", "Socket.IO", "PostgreSQL", "SQLAlchemy", "Groq API", "OpenAI GPT-4o", "Recall.ai", "Stripe", "JavaScript", "Gunicorn", "Railway", "Replit"],
     status: "LIVE",
     impacts: ["64% Size Reduction", "0ms Page Transitions", "50+ Endpoints"],
+    liveUrl: "https://saleside.ai/",
     image: "/images/saleside/image (6).png",
     slug: "saleside",
     sections: [
       {
         type: "image",
-        src: "/images/saleside/image (7).png", // ALT: Live meeting interface showing real-time transcript with AI coaching suggestions appearing alongside
-        title: "Real-Time AI Meeting Coaching",
-        text: "Built live meeting transcription system with speaker identification and instant AI-powered objection handling suggestions. Call stage detection (Discovery, Qualification, Presentation, Objection Handling, Closing) provides contextual guidance. Smart sales rep filtering prevents AI coaching on internal team conversations. Sub-second responses via Groq's ultra-fast LLM inference."
+        src: "/images/saleside/image (7).png",
+        title: "Real-Time AI Coaching",
+        text: "Live meeting transcription with speaker identification and instant objection handling. Call stage detection (Discovery through Closing) with sub-second Groq LLM responses."
       },
       {
         type: "image",
-        src: "/images/saleside/image (8).png", // ALT: System architecture diagram showing Flask (Replit) frontend, Railway backend, Socket.IO, and AI integrations
-        title: "Two-Tier Microservice Architecture",
-        text: "Distributed system with Flask application on Replit for UI/UX and Railway-hosted microservice for bot orchestration. Socket.IO with 15-second polling fallback ensures reliable real-time communication. Benefits: independent scaling, specialized server optimization, and fault tolerance preventing complete system failure."
+        src: "/images/saleside/image (8).png",
+        title: "Two-Tier Architecture",
+        text: "Flask frontend + Railway microservice for bot orchestration. Socket.IO with polling fallback for reliable real-time communication and independent scaling."
       },
       {
         type: "image",
-        src: "/images/saleside/image (9).png", // ALT: Performance metrics dashboard or before/after comparison showing 64% HTML reduction
-        title: "Performance Optimization: 64% Size Reduction",
-        text: "Optimized from 168KB single-file (3,422 lines) to 60KB HTML + 17KB CSS + 79KB JS with cache busting versioning (v2.9). Implemented LocalStorage caching with 5-minute expiration reducing page transitions from 400ms to instant. Features 10ms transcript batching, concurrent request handling with ThreadPoolExecutor (10-worker pool), and automatic cancellation of outdated LLM requests."
+        src: "/images/saleside/image (9).png",
+        title: "64% Size Reduction",
+        text: "Optimized from 168KB single-file to 60KB HTML + 17KB CSS + 79KB JS. LocalStorage caching dropped page transitions from 400ms to instant."
       },
       {
         type: "image",
-        src: "/images/saleside/image (10).png", // ALT: Meeting summary page showing AI-generated summary, sentiment analysis, key takeaways, follow-up suggestions
-        title: "AI-Powered Meeting Intelligence",
-        text: "Automatic meeting summary generation using OpenAI GPT-4o with sentiment analysis, engagement tracking, and key takeaway extraction. Customer question detection with categorization and follow-up suggestion generation. Comprehensive 14-table database schema supporting conversation archive, coaching responses, tags, comments, and action tasks."
+        src: "/images/saleside/image (10).png",
+        title: "Meeting Intelligence",
+        text: "GPT-4o powered summaries with sentiment analysis, engagement tracking, and follow-up suggestions. 14-table schema for conversation archive and coaching data."
       },
       {
         type: "image",
-        src: "/images/saleside/image (11).png", // ALT: Coach configuration interface showing customizable AI settings, company context, value proposition, objection handling frameworks
-        title: "Customizable AI Coach Configuration",
-        text: "Per-user AI coaching style customization with company context, value proposition settings, product descriptions, and technical specifications. Custom objection handling frameworks, competitor comparison data, and case studies integration. Call stage definitions with stage-specific guidance for tailored coaching experiences."
+        src: "/images/saleside/image (11).png",
+        title: "Custom AI Coach",
+        text: "Per-user coaching customization with company context, objection frameworks, competitor data, and stage-specific guidance."
       },
       {
         type: "image",
-        src: "/images/saleside/image (12).png", // ALT: Organization management dashboard showing multi-tenant setup, user roles, Stripe subscription management
-        title: "Enterprise Multi-Tenant SaaS",
-        text: "Built multi-organization support with seat-based licensing ($50/seat) and 7-day trial management. Role-based access control (Owner/Admin/Member) with user management dashboard. Complete Stripe integration for subscriptions, checkout flows, and customer portal. Organization-level data isolation ensuring secure multi-tenancy."
+        src: "/images/saleside/image (12).png",
+        title: "Enterprise Multi-Tenant",
+        text: "Seat-based licensing ($50/seat), role-based access (Owner/Admin/Member), Stripe subscriptions, and organization-level data isolation."
       }
     ],
   },
