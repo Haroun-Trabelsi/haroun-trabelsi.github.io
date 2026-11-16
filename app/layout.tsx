@@ -10,7 +10,7 @@ import { SoundProvider } from "@/components/sound/sound-provider";
 
 export const metadata: Metadata = {
   title: "Haroun Trabelsi — Software Engineer | Tunisia",
-  description: "Software Engineer with 15+ months of professional experience building production AI platforms, enterprise SaaS tools, and scalable full-stack applications. Skilled in React, TypeScript, FastAPI, Node.js, and cloud infrastructure.",
+  description: "Software Engineer with nearly two years of professional experience building production AI platforms, enterprise SaaS tools, and scalable full-stack applications. Skilled in React, TypeScript, FastAPI, Node.js, and cloud infrastructure.",
   applicationName: "Haroun Trabelsi Portfolio",
   generator: "Next.js",
   icons: {

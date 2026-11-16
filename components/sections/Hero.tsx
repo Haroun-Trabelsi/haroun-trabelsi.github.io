@@ -43,7 +43,7 @@ export function Hero() {
         </div>
 
         <p className="text-muted-foreground text-xl mb-4 leading-relaxed">
-          Full-stack engineer currently building an AI sales platform serving 10+ enterprise clients. 15 months of shipping production software across AI/ML pipelines, real-time systems, and enterprise SaaS.
+          Full-stack engineer currently building an AI sales platform serving 10+ enterprise clients. Nearly two years of shipping production software across AI/ML pipelines, real-time systems, and enterprise SaaS.
         </p>
 
         <p className="text-muted-foreground text-lg mb-8 leading-relaxed">

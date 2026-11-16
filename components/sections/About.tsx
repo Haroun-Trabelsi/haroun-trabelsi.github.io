@@ -11,7 +11,7 @@ export function About() {
         <h3 className="font-pixel text-secondary text-lg mb-4">ABOUT.EXE</h3>
         <p className="text-muted-foreground leading-relaxed mb-4">
           I'm a <b className="text-primary">Software Engineer</b> currently at Skaled, where I've been building
-          JourneyAI — a production AI sales platform serving 10+ enterprise clients — for the past 6 months.
+          JourneyAI — a production AI sales platform serving 10+ enterprise clients — for over a year.
           My career started with a treasury management system at Infotec, and within 6 months I was leading a team
           as <b className="text-primary">Tech Lead</b> at Vision Age VFX, architecting a full-stack VFX production platform now used by 2+ studios.
         </p>

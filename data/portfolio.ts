@@ -45,7 +45,7 @@ export const projects: Project[] = [
   {
     title: "JourneyAI",
     image: "/images/journeylanding.png",
-    description: "Production-grade AI sales assistant platform serving 10+ enterprise clients with 98% uptime, developed over 8 months across EverythingToGain and Skaled (ongoing). Built sophisticated RAG pipeline with multi-collection vector search, real-time WebSocket streaming, session snapshots/forking system, and comprehensive subscription management. Contributed 25% of codebase including semantic search engine, background worker system, and Stripe integration.",
+    description: "Production-grade AI sales assistant platform serving 10+ enterprise clients with 98% uptime, developed over a year across EverythingToGain and Skaled (ongoing). Built sophisticated RAG pipeline with multi-collection vector search, real-time WebSocket streaming, session snapshots/forking system, and comprehensive subscription management. Contributed 25% of codebase including semantic search engine, background worker system, and Stripe integration.",
     tech: ["React 19", "TypeScript", "FastAPI", "MongoDB", "Qdrant", "Redis", "OpenAI GPT-4", "WebSockets", "ARQ", "Stripe", "Docker", "Pydantic", "Beanie ODM"],
     status: "LIVE",
     impacts: ["10+ Enterprise Clients", "98% Uptime", "70+ Components"],
